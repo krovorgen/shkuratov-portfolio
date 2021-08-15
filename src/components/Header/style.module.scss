@@ -1,0 +1,19 @@
+.header {
+  margin-bottom: 100px;
+  padding: 16px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+}

@@ -19,6 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "stylelint:fix": "stylelint \"**/*{.css,.scss}\" --fix",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -39,5 +40,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.1.8",
+    "@types/uuid": "^8.3.0",
+    "classnames": "^2.3.1",
+    "gh-pages": "^3.2.3",
+    "node-sass": "5.0.0",
+    "prettier": "2.3.0",
+    "react-router-dom": "^5.2.0",
+    "stylelint": "^13.13.1",
+    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.19.0",
+    "uuid": "^8.3.2"
   }
 }
