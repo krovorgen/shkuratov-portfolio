@@ -19,7 +19,7 @@ const Home = () => {
             <p className={styles['home__statistics']}>50+</p>
           </li>
           <li className={styles['home__item']}>
-            <p className={styles['home__statistics']}>>1 400 000</p>
+            <p className={styles['home__statistics']}>&gt;1 400 000</p>
           </li>
         </ul>
       </div>
