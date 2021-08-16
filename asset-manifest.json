@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/shkuratov-portfolio/static/css/main.62ba921e.chunk.css",
+    "main.js": "/shkuratov-portfolio/static/js/main.3e6fe8da.chunk.js",
+    "main.js.map": "/shkuratov-portfolio/static/js/main.3e6fe8da.chunk.js.map",
+    "runtime-main.js": "/shkuratov-portfolio/static/js/runtime-main.02e0195a.js",
+    "runtime-main.js.map": "/shkuratov-portfolio/static/js/runtime-main.02e0195a.js.map",
+    "static/js/2.4439e966.chunk.js": "/shkuratov-portfolio/static/js/2.4439e966.chunk.js",
+    "static/js/2.4439e966.chunk.js.map": "/shkuratov-portfolio/static/js/2.4439e966.chunk.js.map",
+    "index.html": "/shkuratov-portfolio/index.html",
+    "static/css/main.62ba921e.chunk.css.map": "/shkuratov-portfolio/static/css/main.62ba921e.chunk.css.map",
+    "static/js/2.4439e966.chunk.js.LICENSE.txt": "/shkuratov-portfolio/static/js/2.4439e966.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/shkuratov-portfolio/static/media/Formular-Regular.8e0d9e35.woff2",
+    "static/media/style.module.scss": "/shkuratov-portfolio/static/media/itec.999cba68.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.02e0195a.js",
+    "static/js/2.4439e966.chunk.js",
+    "static/css/main.62ba921e.chunk.css",
+    "static/js/main.3e6fe8da.chunk.js"
+  ]
+}
