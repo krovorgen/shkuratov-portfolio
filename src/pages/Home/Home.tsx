@@ -1,10 +1,12 @@
 import React from 'react';
 
-import { Hero, Keys, MoreProject } from '../../components';
+import { Hero } from '../../components/Hero';
+import { Keys } from '../../components/Keys';
+import { MoreProject } from '../../components/MoreProject';
 
 import styles from './style.module.scss';
 
-const Home = () => {
+export const Home = () => {
   return (
     <div className={styles['home']}>
       <Hero />
@@ -13,5 +15,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;

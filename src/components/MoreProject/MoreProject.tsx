@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import styles from './style.module.scss';
 
-const MoreProject: FC = () => {
+export const MoreProject: FC = () => {
   return (
     <section className={styles['more-project']}>
       <div className="container">
@@ -12,5 +12,3 @@ const MoreProject: FC = () => {
     </section>
   );
 };
-
-export default MoreProject;

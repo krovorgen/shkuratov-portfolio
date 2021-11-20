@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import styles from './style.module.scss';
 
-const Hero: FC = () => {
+export const Hero: FC = () => {
   return (
     <section className={styles['hero']}>
       <div className="container">
@@ -37,5 +37,3 @@ const Hero: FC = () => {
     </section>
   );
 };
-
-export default Hero;

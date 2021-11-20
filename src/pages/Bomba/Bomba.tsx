@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Navigation } from '../../components';
+import Navigation from '../../components/Navigation/Navigation';
 
 import styles from './style.module.scss';
 
-const Bomba = () => {
+export const Bomba = () => {
   return (
     <div className={styles['bomba']}>
       <div className="container">Bomba</div>
@@ -12,5 +12,3 @@ const Bomba = () => {
     </div>
   );
 };
-
-export default Bomba;

@@ -1,8 +1,12 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import { Bomba, Dinamo, Home, Itec } from './pages';
-import { Footer, Header } from './components';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { Home } from './pages/Home';
+import { Bomba } from './pages/Bomba';
+import { Dinamo } from './pages/Dinamo';
+import { Itec } from './pages/Itec';
 
 const App = () => {
   return (

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Navigation } from '../../components';
+import Navigation from '../../components/Navigation/Navigation';
 
 import styles from './style.module.scss';
 
-const Dinamo = () => {
+export const Dinamo = () => {
   return (
     <div className={styles['dinamo']}>
       <div className="container">Dinamo</div>
@@ -12,5 +12,3 @@ const Dinamo = () => {
     </div>
   );
 };
-
-export default Dinamo;

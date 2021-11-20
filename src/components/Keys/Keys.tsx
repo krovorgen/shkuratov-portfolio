@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import styles from './style.module.scss';
 
-const Keys: FC = () => {
+export const Keys: FC = () => {
   return (
     <section className={styles['keys']}>
       <div className="container">
@@ -48,5 +48,3 @@ const Keys: FC = () => {
     </section>
   );
 };
-
-export default Keys;

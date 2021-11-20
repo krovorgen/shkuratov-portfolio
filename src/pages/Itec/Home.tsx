@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Navigation } from '../../components';
+import Navigation from '../../components/Navigation/Navigation';
 
 import styles from './style.module.scss';
 
-const Itec = () => {
+export const Itec = () => {
   return (
     <div className={styles['itec']}>
       <div className="container">Itec</div>
@@ -12,5 +12,3 @@ const Itec = () => {
     </div>
   );
 };
-
-export default Itec;
