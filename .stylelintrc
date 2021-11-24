@@ -15,6 +15,11 @@
       },
       "declarations",
       {
+        "type": "at-rule",
+        "name": "include",
+        "hasBlock": true
+      },
+      {
         "type": "rule",
         "selector": "&::before"
       },
@@ -22,7 +27,10 @@
         "type": "rule",
         "selector": "&::after"
       },
-      "rules",
+      {
+        "type": "rule",
+        "selector": "&:hover"
+      },
       {
         "type": "rule",
         "selector": "&:link"
@@ -34,10 +42,6 @@
       {
         "type": "rule",
         "selector": "&:focus"
-      },
-      {
-        "type": "rule",
-        "selector": "&:hover"
       },
       {
         "type": "rule",
@@ -53,15 +57,20 @@
       },
       {
         "type": "rule",
-        "selector": "&:last-child"
-      },
-      {
-        "type": "rule",
         "selector": "&:nth-child.+"
       },
       {
         "type": "rule",
+        "selector": "&:last-child"
+      },
+      {
+        "type": "rule",
         "selector": "&\\[[^\\[\\]]+\\]"
+      },
+      "rules",
+      {
+        "type": "rule",
+        "selector": "&--.+"
       },
       {
         "type": "rule",
@@ -69,16 +78,11 @@
       },
       {
         "type": "rule",
-        "selector": "&--.+"
-      },
-      {
-        "type": "rule",
         "selector": ".* &"
       },
       {
-        "type": "at-rule",
-        "name": "include",
-        "hasBlock": true
+        "type": "rule",
+        "selector": "&__.+"
       },
       "at-rules"
     ],
@@ -615,6 +619,12 @@
     "media-query-list-comma-space-before": "never",
     "no-descending-specificity": null,
     "no-duplicate-selectors": true,
+    "declaration-property-value-disallowed-list":[
+      {"transition":["/all/"]}
+    ],
+    "property-disallowed-list": [
+      ["background"]
+    ],
     "no-empty-source": [
       true,
       {
@@ -679,7 +689,7 @@
     "selector-no-vendor-prefix": true,
     "selector-pseudo-class-blacklist": null,
     "selector-pseudo-class-case": "lower",
-    "selector-pseudo-class-no-unknown": true,
+    "selector-pseudo-class-no-unknown": null,
     "selector-pseudo-class-parentheses-space-inside": "never",
     "selector-pseudo-class-whitelist": null,
     "selector-pseudo-element-case": "lower",

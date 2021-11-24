@@ -28,3 +28,10 @@ body {
 .main {
   flex-grow: 1;
 }
+
+.logo {
+  svg {
+    width: 128px;
+    height: 43px;
+  }
+}

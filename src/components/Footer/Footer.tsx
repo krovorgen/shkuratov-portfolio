@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className={styles['footer']}>
       <div className="container">
         <div className={styles['footer__inner']}>
-          <a className={styles['footer__link']} href="#">
+          <a className={styles['footer__link']} href="https://t.me/ShkuratovDesigner/">
             <svg>
               <use xlinkHref={`./images/sprite.svg#telegram-2`} />
             </svg>
