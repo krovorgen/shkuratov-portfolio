@@ -49,14 +49,14 @@ export const Keys: FC = () => {
       <div className="container">
         <ul className={styles['keys__items']}>
           {data.map((item, index) => (
-            <li className={`${styles['keys__item']} ${styles[`keys__item--${item.name}`]}`} key={index}>
-              <time className={styles['keys__date']}>${item.date}</time>
-              <h2 className={styles['keys__title']}>${item.title}</h2>
+            <li className={`${styles['keys__item']} ${styles[item.name]}`} key={index}>
+              <time className={styles['keys__date']}>{item.date}</time>
+              <h2 className={styles['keys__title']}>{item.title}</h2>
               <div className={styles['keys__bottom']}>
                 <NavLink className={styles['keys__link']} to={`/${item.name}`}>
                   <Button variant="span">Смотреть кейс</Button>
                 </NavLink>
-                <p className={styles['keys__reading']}>${item.period}</p>
+                <p className={styles['keys__reading']}>{item.period}</p>
               </div>
             </li>
           ))}
