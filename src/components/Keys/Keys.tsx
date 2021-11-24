@@ -48,8 +48,8 @@ export const Keys: FC = () => {
     <section className={styles['keys']}>
       <div className="container">
         <ul className={styles['keys__items']}>
-          {data.map((item) => (
-            <li className={`${styles['keys__item']} ${styles[`keys__item--${item.name}`]}`}>
+          {data.map((item, index) => (
+            <li className={`${styles['keys__item']} ${styles[`keys__item--${item.name}`]}`} key={index}>
               <time className={styles['keys__date']}>${item.date}</time>
               <h2 className={styles['keys__title']}>${item.title}</h2>
               <div className={styles['keys__bottom']}>

@@ -26,8 +26,8 @@ export const Header = () => {
           </svg>
         </NavLink>
         <ul className={styles['header__items']}>
-          {data.map((item) => (
-            <li className={styles['header__item']}>
+          {data.map((item, index) => (
+            <li className={styles['header__item']} key={index}>
               <a className={styles['header__link']} target="_blank" rel="noreferrer" href={item.href}>
                 <img src={item.img} alt={item.alt} />
               </a>
