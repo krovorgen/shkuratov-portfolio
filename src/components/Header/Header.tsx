@@ -18,17 +18,17 @@ export const Header = () => {
         <nav className={styles['menu']}>
           <ul className={styles['items']}>
             <li className={styles['item']}>
-              <a className={styles['navigation']} href="#" target="_blank" rel="noreferrer">
+              <a className={styles['navigation']} href="https://test.com" target="_blank" rel="noreferrer">
                 Эбаут
               </a>
             </li>
             <li className={styles['item']}>
-              <a className={styles['navigation']} href="#" target="_blank" rel="noreferrer">
+              <a className={styles['navigation']} href="https://test.com" target="_blank" rel="noreferrer">
                 Резюме
               </a>
             </li>
             <li className={styles['item']}>
-              <a className={styles['navigation']} href="#" target="_blank" rel="noreferrer">
+              <a className={styles['navigation']} href="https://test.com" target="_blank" rel="noreferrer">
                 Проекты
               </a>
             </li>
