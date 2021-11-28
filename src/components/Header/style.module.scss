@@ -17,3 +17,37 @@
     margin-right: 24px;
   }
 }
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #c3c3c3;
+
+  &.telegram {
+    &:hover {
+      background-color: #2f89ce;
+    }
+  }
+
+  &.behance {
+    &:hover {
+      background-color: #1c66fb;
+    }
+  }
+
+  &.linkedin {
+    &:hover {
+      background-color: #2878b7;
+    }
+  }
+
+  &.instagram {
+    &:hover {
+      background-image: linear-gradient(43.94deg, #eea054 16.16%, #d64763 50.11%, #b62a99 83.68%);
+    }
+  }
+}
