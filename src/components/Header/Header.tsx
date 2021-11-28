@@ -18,7 +18,12 @@ export const Header = () => {
         <ul className={styles['items']}>
           {headerData.map((item, index) => (
             <li className={styles['item']} key={index}>
-              <a className={cn(styles['link'], styles[item.social])} target="_blank" rel="noreferrer" href={item.href}>
+              <a
+                className={cn(styles['link'], 'icon', styles[item.social])}
+                target="_blank"
+                rel="noreferrer"
+                href={item.href}
+              >
                 <img src={`./images/social-icon/${item.social}.svg`} alt={item.social} />
               </a>
             </li>

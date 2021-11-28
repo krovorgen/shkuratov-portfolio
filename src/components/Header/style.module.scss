@@ -19,14 +19,6 @@
 }
 
 .link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: #c3c3c3;
-
   &.telegram {
     &:hover {
       background-color: #2f89ce;
