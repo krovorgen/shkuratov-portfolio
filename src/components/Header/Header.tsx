@@ -15,9 +15,28 @@ export const Header = () => {
             <use xlinkHref={`./images/sprite.svg#logo`} />
           </svg>
         </NavLink>
-        <ul className={styles['items']}>
+        <nav className={styles['menu']}>
+          <ul className={styles['items']}>
+            <li className={styles['item']}>
+              <a className={styles['navigation']} href="#" target="_blank" rel="noreferrer">
+                Эбаут
+              </a>
+            </li>
+            <li className={styles['item']}>
+              <a className={styles['navigation']} href="#" target="_blank" rel="noreferrer">
+                Резюме
+              </a>
+            </li>
+            <li className={styles['item']}>
+              <a className={styles['navigation']} href="#" target="_blank" rel="noreferrer">
+                Проекты
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <ul className={styles['socials']}>
           {headerData.map((item, index) => (
-            <li className={styles['item']} key={index}>
+            <li className={styles['social']} key={index}>
               <a
                 className={cn(styles['link'], 'icon', styles[item.social])}
                 target="_blank"
