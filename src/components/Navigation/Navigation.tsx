@@ -7,7 +7,7 @@ interface INavigationProps {
   nextLink: string;
 }
 
-const Navigation: FC<INavigationProps> = ({ nextLink }) => {
+export const Navigation: FC<INavigationProps> = ({ nextLink }) => {
   return (
     <div className={styles['navigation']}>
       <div className={`container ${styles['navigation__container']}`}>
@@ -21,5 +21,3 @@ const Navigation: FC<INavigationProps> = ({ nextLink }) => {
     </div>
   );
 };
-
-export default Navigation;

@@ -1,15 +1,15 @@
-.more-project {
+.root {
   margin-bottom: 95px;
+}
 
-  &__title {
-    margin-bottom: 80px;
-    font-size: 56px;
-    line-height: 110%;
-    color: #0b0b0b;
-  }
+.title {
+  margin-bottom: 80px;
+  font-size: 56px;
+  line-height: 110%;
+  color: #0b0b0b;
+}
 
-  &__inner {
-    height: 760px;
-    background-color: #000;
-  }
+.inner {
+  height: 760px;
+  background-color: #000;
 }

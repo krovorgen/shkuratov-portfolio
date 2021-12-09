@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, memo } from 'react';
 import { NavLink } from 'react-router-dom';
 import cn from 'classnames';
 
@@ -6,9 +6,20 @@ import { headerData } from '../../data/headerData';
 
 import styles from './style.module.scss';
 
-export const Header = () => {
+type HeaderProps = {
+  page?: 'about' | 'dinamo' | 'itec' | 'bomba';
+};
+
+export const Header: FC<HeaderProps> = memo(({ page }) => {
+  const appearances = {
+    [styles.aboutPage]: page === 'about',
+    [styles.dinamoPage]: page === 'dinamo',
+    [styles.itecPage]: page === 'itec',
+    [styles.bombaPage]: page === 'bomba',
+  };
+
   return (
-    <header className={styles.header}>
+    <header className={cn(styles.header, appearances)}>
       <div className={`container ${styles.container}`}>
         <NavLink className={`logo ${styles.logo}`} to="/">
           <svg>
@@ -23,12 +34,12 @@ export const Header = () => {
               </NavLink>
             </li>
             <li className={styles.item}>
-              <a className={styles.navigation} href="https://test.com" target="_blank" rel="noopener">
+              <a className={styles.navigation} href="https://test.com" rel="noopener">
                 Резюме
               </a>
             </li>
             <li className={styles.item}>
-              <a className={styles.navigation} href="https://test.com" target="_blank" rel="noopener">
+              <a className={styles.navigation} href="https://test.com" rel="noopener">
                 Проекты
               </a>
             </li>
@@ -51,4 +62,4 @@ export const Header = () => {
       </div>
     </header>
   );
-};
+});

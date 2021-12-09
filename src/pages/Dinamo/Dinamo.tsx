@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Navigation from '../../components/Navigation/Navigation';
-
-import styles from './style.module.scss';
+import { Navigation } from '../../components/Navigation';
+import { Header } from '../../components/Header';
 
 export const Dinamo = () => {
   return (
-    <div className={styles['dinamo']}>
+    <>
+      <Header page="dinamo" />
       <div className="container">Dinamo</div>
       <Navigation nextLink="/itec" />
-    </div>
+    </>
   );
 };

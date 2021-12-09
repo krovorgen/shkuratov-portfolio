@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Navigation from '../../components/Navigation/Navigation';
-
-import styles from './style.module.scss';
+import { Header } from '../../components/Header';
+import { Navigation } from '../../components/Navigation';
 
 export const Bomba = () => {
   return (
-    <div className={styles['bomba']}>
+    <>
+      <Header page="bomba" />
       <div className="container">Bomba</div>
       <Navigation nextLink="/dinamo" />
-    </div>
+    </>
   );
 };

@@ -4,11 +4,11 @@ import styles from './style.module.scss';
 
 export const MoreProject: FC = () => {
   return (
-    <section className={styles['more-project']}>
+    <section className={styles.root} id="project">
       <div className="container">
-        <h2 className={styles['more-project__title']}>И ещё много проектов. . .</h2>
+        <h2 className={styles.title}>И ещё много проектов. . .</h2>
       </div>
-      <div className={styles['more-project__inner']}></div>
+      <div className={styles.inner}></div>
     </section>
   );
 };
