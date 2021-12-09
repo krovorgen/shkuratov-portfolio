@@ -8,7 +8,7 @@ export const MoreProject: FC = () => {
       <div className="container">
         <h2 className={styles.title}>И ещё много проектов. . .</h2>
       </div>
-      <div className={styles.inner}></div>
+      <div className={styles.inner} />
     </section>
   );
 };

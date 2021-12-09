@@ -9,12 +9,12 @@ interface INavigationProps {
 
 export const Navigation: FC<INavigationProps> = ({ nextLink }) => {
   return (
-    <div className={styles['navigation']}>
-      <div className={`container ${styles['navigation__container']}`}>
-        <NavLink className={styles['navigation__link']} to="/">
+    <div className={styles.navigation}>
+      <div className={`container ${styles.container}`}>
+        <NavLink className={styles.link} to="/">
           На главную
         </NavLink>
-        <NavLink className={styles['navigation__link']} to={nextLink}>
+        <NavLink className={styles.link} to={nextLink}>
           Следующий кейс
         </NavLink>
       </div>
