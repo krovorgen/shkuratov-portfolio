@@ -7,6 +7,7 @@ import { Home } from './pages/Home';
 import { Bomba } from './pages/Bomba';
 import { Dinamo } from './pages/Dinamo';
 import { Itec } from './pages/Itec';
+import { About } from './pages/About';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/bomba" exact component={Bomba} />
         <Route path="/dinamo" exact component={Dinamo} />
         <Route path="/itec" exact component={Itec} />
+        <Route path="/about" exact component={About} />
       </main>
       <Footer />
     </div>

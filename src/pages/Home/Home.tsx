@@ -8,10 +8,10 @@ import styles from './style.module.scss';
 
 export const Home = () => {
   return (
-    <div className={styles['home']}>
+    <>
       <Hero />
       <Keys />
       <MoreProject />
-    </div>
+    </>
   );
 };

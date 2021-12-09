@@ -1,15 +1,33 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
 .header {
   position: fixed;
   margin-bottom: 100px;
   padding: 16px 0;
   width: 100%;
   background-color: #fafafa;
+
+  @include media($md) {
+    position: absolute;
+    padding: 12px 0;
+  }
 }
 
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include media($md) {
+    flex-direction: column;
+  }
+}
+
+.logo {
+  @include media($md) {
+    margin-bottom: 24px;
+  }
 }
 
 .socials {
@@ -54,6 +72,10 @@
 
 .items {
   display: flex;
+
+  @include media($md) {
+    margin-bottom: 24px;
+  }
 }
 
 .item {

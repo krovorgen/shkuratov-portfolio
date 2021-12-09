@@ -8,37 +8,37 @@ import styles from './style.module.scss';
 
 export const Header = () => {
   return (
-    <header className={styles['header']}>
-      <div className={`container ${styles['container']}`}>
-        <NavLink className="logo" to="/">
+    <header className={styles.header}>
+      <div className={`container ${styles.container}`}>
+        <NavLink className={`logo ${styles.logo}`} to="/">
           <svg>
             <use xlinkHref={`./images/sprite.svg#logo`} />
           </svg>
         </NavLink>
-        <nav className={styles['menu']}>
-          <ul className={styles['items']}>
-            <li className={styles['item']}>
-              <a className={styles['navigation']} href="https://test.com" target="_blank" rel="noreferrer">
+        <nav className={styles.menu}>
+          <ul className={styles.items}>
+            <li className={styles.item}>
+              <NavLink to="/about" className={styles.navigation}>
                 Эбаут
-              </a>
+              </NavLink>
             </li>
-            <li className={styles['item']}>
-              <a className={styles['navigation']} href="https://test.com" target="_blank" rel="noreferrer">
+            <li className={styles.item}>
+              <a className={styles.navigation} href="https://test.com" target="_blank" rel="noopener">
                 Резюме
               </a>
             </li>
-            <li className={styles['item']}>
-              <a className={styles['navigation']} href="https://test.com" target="_blank" rel="noreferrer">
+            <li className={styles.item}>
+              <a className={styles.navigation} href="https://test.com" target="_blank" rel="noopener">
                 Проекты
               </a>
             </li>
           </ul>
         </nav>
-        <ul className={styles['socials']}>
+        <ul className={styles.socials}>
           {headerData.map((item, index) => (
-            <li className={styles['social']} key={index}>
+            <li className={styles.social} key={index}>
               <a
-                className={cn(styles['link'], 'icon', styles[item.social])}
+                className={cn(styles.link, 'icon', styles[item.social])}
                 target="_blank"
                 rel="noreferrer"
                 href={item.href}
