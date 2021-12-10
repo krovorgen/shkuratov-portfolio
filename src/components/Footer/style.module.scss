@@ -41,7 +41,10 @@
   color: #f1f0f0;
 
   span {
-    position: relative;
+    position: absolute;
+    left: 50%;
     bottom: -20px;
+    white-space: nowrap;
+    transform: translateX(-50%);
   }
 }
