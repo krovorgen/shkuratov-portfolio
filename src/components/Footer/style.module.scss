@@ -52,11 +52,20 @@
   line-height: 120%;
   color: #f1f0f0;
 
+  @include media($sm) {
+    height: 53px;
+    font-size: 36px;
+  }
+
   span {
     position: absolute;
     left: 50%;
     bottom: -20px;
     white-space: nowrap;
     transform: translateX(-50%);
+
+    @include media($sm) {
+      bottom: -10px;
+    }
   }
 }
