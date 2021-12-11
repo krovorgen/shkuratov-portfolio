@@ -94,3 +94,44 @@
     color: #0b0b0b;
   }
 }
+
+.tooltip {
+  padding: 16px;
+  max-width: 370px;
+  font-size: 16px;
+  text-align: center;
+
+  mark {
+    font-weight: 500;
+    color: #ee322c;
+  }
+
+  span {
+    font-weight: 500;
+  }
+}
+
+.faq {
+  position: relative;
+  display: inline-block;
+  padding: 2px 18px 1px 6px;
+  border-radius: 4px;
+  line-height: 1;
+  background-color: #dedede;
+  cursor: pointer;
+
+  &:hover {
+    svg {
+      fill: #8b8b8b;
+    }
+  }
+
+  svg {
+    position: absolute;
+    right: 4px;
+    top: 0;
+    width: 8px;
+    height: 17px;
+    fill: #ee322c;
+  }
+}
