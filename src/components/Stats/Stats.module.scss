@@ -1,0 +1,130 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.root {
+  margin-top: -55px;
+  margin-bottom: 100px;
+
+  @include media($lg) {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.items {
+  display: flex;
+  margin-bottom: 40px;
+  padding: 24px 64px;
+  width: 100%;
+  height: 110px;
+  background-color: #fff;
+
+  @include media($lg) {
+    padding: 16px 8px;
+  }
+
+  @include media($sm) {
+    flex-direction: column;
+    margin-bottom: 24px;
+    height: auto;
+  }
+}
+
+.item {
+  &:not(:last-child) {
+    margin-right: 128px;
+
+    @include media($lg) {
+      margin-right: 48px;
+    }
+
+    @include media($sm) {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.title {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #8b8b8b;
+
+  @include media($sm) {
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+}
+
+.text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #0b0b0b;
+
+  @include media($sm) {
+    font-size: 14px;
+  }
+}
+
+.elements {
+  display: flex;
+
+  @include media($sm) {
+    flex-direction: column;
+  }
+}
+
+.element {
+  padding: 24px 24px 32px;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+
+  @include media($lg) {
+    padding: 16px 8px 24px;
+  }
+
+  @include media($sm) {
+    text-align: left;
+  }
+
+  &:not(:last-child) {
+    margin-right: 40px;
+
+    @include media($sm) {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.subtitle {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.2;
+  color: #ee322c;
+
+  @include media($sm) {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+}
+
+.descr {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #0b0b0b;
+
+  @include media($sm) {
+    font-size: 16px;
+  }
+
+  mark {
+    color: #8b8b8b;
+  }
+}

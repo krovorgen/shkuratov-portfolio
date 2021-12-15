@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { NavLink } from 'react-router-dom';
-import { keysData } from '../../data/keysData';
 
-import { Button } from '../Button';
+import { Button } from '../../../components/Button';
+import { keysData } from '../../../data/keysData';
 
 import styles from './style.module.scss';
 

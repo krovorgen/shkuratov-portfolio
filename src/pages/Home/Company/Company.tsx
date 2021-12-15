@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { companyLinkData } from '../../data/companyLinkData';
+import { companyLinkData } from '../../../data/companyLinkData';
 
 import styles from './Company.module.scss';
 

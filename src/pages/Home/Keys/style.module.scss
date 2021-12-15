@@ -1,5 +1,5 @@
-@import "./src/scss/vars";
-@import "./src/scss/mixins";
+@import "../../../scss/vars";
+@import "../../../scss/mixins";
 
 .keys {
   margin-bottom: 160px;
@@ -35,15 +35,15 @@
   }
 
   &.dinamo {
-    background-image: url("../../images/keys/dinamo.png");
+    background-image: url("../../../images/keys/dinamo.png");
   }
 
   &.itec {
-    background-image: url("../../images/keys/itec.png");
+    background-image: url("../../../images/keys/itec.png");
   }
 
   &.bomba {
-    background-image: url("../../images/keys/bomba.png");
+    background-image: url("../../../images/keys/bomba.png");
   }
 }
 

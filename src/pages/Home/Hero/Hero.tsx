@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Tippy from '@tippyjs/react';
 
-import { heroData } from '../../data/heroData';
+import { heroData } from '../../../data/heroData';
 
 import styles from './style.module.scss';
 import 'tippy.js/dist/tippy.css';
