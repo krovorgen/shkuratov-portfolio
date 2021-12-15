@@ -11,8 +11,8 @@ export const Bomba = () => {
   return (
     <>
       <Header page="bomba" />
-      <Stats data={bombaStats} />
       <HeroSection page="bomba" data={bomba} />
+      <Stats data={bombaStats} />
       <Navigation nextLink="/dinamo" />
     </>
   );
