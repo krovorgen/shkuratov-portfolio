@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './styles.module.scss';
+import styles from './AboutMe.module.scss';
 
 export const AboutMe = () => {
   return (

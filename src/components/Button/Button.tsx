@@ -1,6 +1,6 @@
 import React, { ButtonHTMLAttributes, DetailedHTMLProps, FC, LinkHTMLAttributes } from 'react';
 import cn from 'classnames';
-import styles from './styles.module.scss';
+import styles from './Button.module.scss';
 
 type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
 type DefaultLinkPropsType = DetailedHTMLProps<LinkHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>;

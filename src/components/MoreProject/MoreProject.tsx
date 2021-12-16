@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import styles from './style.module.scss';
+import styles from './MoreProject.module.scss';
 
 export const MoreProject: FC = () => {
   return (

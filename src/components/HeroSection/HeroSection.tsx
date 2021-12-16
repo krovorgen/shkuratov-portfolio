@@ -1,7 +1,7 @@
 import React, { FC, memo } from 'react';
 import cn from 'classnames';
 
-import styles from './styles.module.scss';
+import styles from './HeroSection.module.scss';
 
 export type HeroSectionData = {
   date?: string;

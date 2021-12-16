@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { Button } from '../../../components/Button';
 import { keysData } from '../../../data/keysData';
 
-import styles from './style.module.scss';
+import styles from './Keys.module.scss';
 
 export const Keys: FC = () => {
   return (

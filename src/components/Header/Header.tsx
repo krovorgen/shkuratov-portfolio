@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 import { headerData } from '../../data/headerData';
 
-import styles from './style.module.scss';
+import styles from './Header.module.scss';
 
 type HeaderProps = {
   page?: 'about' | 'dinamo' | 'itec' | 'bomba';

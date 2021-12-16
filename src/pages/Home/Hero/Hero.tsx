@@ -3,7 +3,7 @@ import Tippy from '@tippyjs/react';
 
 import { heroData } from '../../../data/heroData';
 
-import styles from './style.module.scss';
+import styles from './Hero.module.scss';
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/themes/light-border.css';
 

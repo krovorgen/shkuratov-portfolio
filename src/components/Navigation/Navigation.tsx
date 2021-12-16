@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { NavLink } from 'react-router-dom';
-
-import styles from './style.module.scss';
 import cn from 'classnames';
+
+import styles from './Navigation.module.scss';
 
 interface INavigationProps {
   nextLink: string;
