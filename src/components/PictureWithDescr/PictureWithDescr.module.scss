@@ -1,0 +1,9 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.text {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 150%;
+  color: #8b8b8b;
+}
