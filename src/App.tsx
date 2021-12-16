@@ -8,7 +8,7 @@ import { Dinamo } from './pages/Dinamo';
 import { Itec } from './pages/Itec';
 import { About } from './pages/About';
 
-const App = () => {
+export const App = () => {
   return (
     <div className="main-wrap">
       <main className="main">
@@ -22,5 +22,3 @@ const App = () => {
     </div>
   );
 };
-
-export default App;

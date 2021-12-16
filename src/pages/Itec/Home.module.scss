@@ -1,0 +1,10 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.videoYT {
+  margin-bottom: 160px;
+
+  @include media($sm) {
+    margin-bottom: 40px;
+  }
+}

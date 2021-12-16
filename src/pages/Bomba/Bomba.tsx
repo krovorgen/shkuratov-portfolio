@@ -6,6 +6,9 @@ import { HeroSection } from '../../components/HeroSection';
 import { bomba } from '../../data/HeroSectionData/bomba';
 import { bomba as bombaStats } from '../../data/StatsSectionData/bomba';
 import { Stats } from '../../components/Stats';
+import { VideoYT } from '../../components/VideoYT';
+
+import styles from './Bomba.module.scss';
 
 export const Bomba = () => {
   return (
@@ -13,6 +16,7 @@ export const Bomba = () => {
       <Header page="bomba" />
       <HeroSection page="bomba" data={bomba} />
       <Stats data={bombaStats} />
+      <VideoYT videoID="ql9TiOhGx0s" addClass={styles.videoYT} />
       <Navigation nextLink="/dinamo" />
     </>
   );

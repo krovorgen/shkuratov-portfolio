@@ -80,5 +80,10 @@
     @include media($sm) {
       font-size: 14px;
     }
+
+    &:hover {
+      text-decoration-line: underline;
+      color: #005e94;
+    }
   }
 }

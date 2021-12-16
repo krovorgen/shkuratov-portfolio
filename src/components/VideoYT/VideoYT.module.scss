@@ -1,0 +1,25 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.wrap {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 28.25%;
+  width: 100%;
+  height: 540px;
+  max-width: 1180px;
+  overflow: hidden;
+
+  @include media($sm) {
+    height: 170px;
+  }
+
+  iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
