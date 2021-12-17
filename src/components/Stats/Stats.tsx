@@ -24,8 +24,8 @@ export const Stats: FC<StatsProps> = ({ data }) => {
           ))}
         </ul>
         <ul className={styles.elements}>
-          {data.statistics?.map((el) => (
-            <li className={styles.element}>
+          {data.statistics?.map((el, index) => (
+            <li className={styles.element} key={index}>
               <h4 className={styles.subtitle}>{el.title}</h4>
               <p className={styles.descr}>{el.text}</p>
             </li>

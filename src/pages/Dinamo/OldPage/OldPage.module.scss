@@ -1,0 +1,58 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.root {
+  margin-bottom: 160px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  overflow-y: scroll;
+
+  @include media($sm) {
+    margin-bottom: 8px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.items {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+
+    @include media($sm) {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.itemsBottom {
+  margin-left: auto;
+
+  @include media($xxl) {
+    margin-left: 50px;
+  }
+}
+
+.item {
+  min-width: 436px;
+
+  @include media($sm) {
+    height: 95px;
+    min-width: 172px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 32px;
+
+    @include media($sm) {
+      margin-right: 12px;
+    }
+  }
+}

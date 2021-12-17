@@ -1,0 +1,19 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.text {
+  font-size: 16px;
+  line-height: 1.4;
+
+  @include media($sm) {
+    font-size: 14px;
+  }
+}
+
+.black {
+  color: #0b0b0b;
+}
+
+.grey {
+  color: #8b8b8b;
+}

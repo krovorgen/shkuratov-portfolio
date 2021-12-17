@@ -8,6 +8,7 @@ import { Stats } from '../../components/Stats';
 import { dinamo as dinamoStats } from '../../data/StatsSectionData/dinamo';
 import { VideoYT } from '../../components/VideoYT';
 import { UxResearch } from './UxResearch';
+import { OldPage } from './OldPage';
 
 import styles from './Dinamo.module.scss';
 
@@ -19,6 +20,7 @@ export const Dinamo = () => {
       <Stats data={dinamoStats} />
       <VideoYT videoID="ql9TiOhGx0s" addClass={styles.videoYT} />
       <UxResearch />
+      <OldPage />
       <Navigation nextLink="/itec" />
     </>
   );
