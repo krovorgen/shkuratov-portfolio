@@ -17,7 +17,11 @@ export const PictureWithDescr: FC<PictureWithDescrProps> = ({ addClass, pathImg,
       <div className={cn(styles.wrap, addClass)}>
         <img src={`./images/${pathImg}`} alt="Картинка" />
       </div>
-      {description ? <Paragraph variant="grey">{description}</Paragraph> : null}
+      {description ? (
+        <Paragraph addClass={styles.text} variant="grey">
+          {description}
+        </Paragraph>
+      ) : null}
     </>
   );
 };

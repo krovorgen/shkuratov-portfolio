@@ -1,0 +1,28 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.root {
+  margin-bottom: 160px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.title {
+  margin-bottom: 24px;
+  max-width: 325px;
+
+  @include media($sm) {
+    margin-bottom: 8px;
+  }
+}
+
+.text {
+  margin-bottom: 56px;
+  max-width: 460px;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+  }
+}

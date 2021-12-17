@@ -2,12 +2,7 @@
 @import "./src/scss/mixins";
 
 .text {
-  font-size: 16px;
   line-height: 1.4;
-
-  @include media($sm) {
-    font-size: 14px;
-  }
 }
 
 .black {
@@ -16,4 +11,20 @@
 
 .grey {
   color: #8b8b8b;
+}
+
+.xs {
+  font-size: 16px;
+
+  @include media($sm) {
+    font-size: 14px;
+  }
+}
+
+.sm {
+  font-size: 36px;
+
+  @include media($sm) {
+    font-size: 16px;
+  }
 }

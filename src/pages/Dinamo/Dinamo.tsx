@@ -9,8 +9,11 @@ import { dinamo as dinamoStats } from '../../data/StatsSectionData/dinamo';
 import { VideoYT } from '../../components/VideoYT';
 import { UxResearch } from './UxResearch';
 import { OldPage } from './OldPage';
+import { DesignProcess } from './DesignProcess';
+import { AudienceAnalys } from './AudienceAnalys';
 
 import styles from './Dinamo.module.scss';
+import { JourneyMap } from './JourneyMap';
 
 export const Dinamo = () => {
   return (
@@ -21,6 +24,9 @@ export const Dinamo = () => {
       <VideoYT videoID="ql9TiOhGx0s" addClass={styles.videoYT} />
       <UxResearch />
       <OldPage />
+      <DesignProcess />
+      <AudienceAnalys />
+      <JourneyMap />
       <Navigation nextLink="/itec" />
     </>
   );

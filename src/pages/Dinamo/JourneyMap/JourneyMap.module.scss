@@ -1,0 +1,57 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.root {
+  margin-bottom: 160px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.wrap {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  background-color: #fff7ea;
+
+  @include media($sm) {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+}
+
+.title {
+  margin-bottom: 24px;
+  max-width: 475px;
+
+  @include media($sm) {
+    margin-bottom: 8px;
+  }
+}
+
+.text {
+  margin-bottom: 56px;
+  max-width: 560px;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+  }
+}
+
+.element {
+  margin-bottom: 56px;
+}
+
+.item {
+  &:not(:last-child) {
+    margin-bottom: 56px;
+
+    @include media($sm) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.descr {
+  max-width: 1034px;
+}
