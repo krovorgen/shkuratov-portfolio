@@ -11,9 +11,11 @@ import { UxResearch } from './UxResearch';
 import { OldPage } from './OldPage';
 import { DesignProcess } from './DesignProcess';
 import { AudienceAnalys } from './AudienceAnalys';
+import { JourneyMap } from './JourneyMap';
+import { Prototyping } from './Prototyping';
+import { Usability } from './Usability';
 
 import styles from './Dinamo.module.scss';
-import { JourneyMap } from './JourneyMap';
 
 export const Dinamo = () => {
   return (
@@ -27,6 +29,8 @@ export const Dinamo = () => {
       <DesignProcess />
       <AudienceAnalys />
       <JourneyMap />
+      <Prototyping />
+      <Usability />
       <Navigation nextLink="/itec" />
     </>
   );

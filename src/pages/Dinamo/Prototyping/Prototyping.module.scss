@@ -1,0 +1,76 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.root {
+  margin-bottom: 160px;
+
+  @include media($sm) {
+    margin-bottom: 84px;
+  }
+}
+
+.container {
+  @include media($sm) {
+    padding: 0;
+  }
+}
+
+.title {
+  margin-bottom: 56px;
+  max-width: 660px;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+  }
+}
+
+.descr {
+  margin-bottom: 24px;
+
+  @include media($sm) {
+    margin-bottom: 8px;
+  }
+}
+
+.text {
+  margin-bottom: 56px;
+  max-width: 535px;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+  }
+}
+
+.wrap {
+  display: flex;
+}
+
+.items {
+  &:first-child {
+    margin-top: 70px;
+
+    @include media($sm) {
+      margin-top: 32px;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 100px;
+
+    @include media($sm) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.item {
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 84px;
+
+    @include media($sm) {
+      margin-bottom: 24px;
+    }
+  }
+}
