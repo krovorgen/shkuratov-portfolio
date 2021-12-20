@@ -13,9 +13,13 @@ import { DesignProcess } from './DesignProcess';
 import { AudienceAnalys } from './AudienceAnalys';
 import { JourneyMap } from './JourneyMap';
 import { Prototyping } from './Prototyping';
+import { MobileFirst } from './MobileFirst';
+import { Gallery } from './Gallery';
 import { Usability } from './Usability';
 
 import styles from './Dinamo.module.scss';
+import { DesktopDemo } from './DesktopDemo';
+import { DescriptionKeys } from '../../components/DescriptionKeys';
 
 export const Dinamo = () => {
   return (
@@ -23,7 +27,7 @@ export const Dinamo = () => {
       <Header page="dinamo" />
       <HeroSection page="dinamo" data={dinamo} />
       <Stats data={dinamoStats} />
-      <VideoYT videoID="ql9TiOhGx0s" addClass={styles.videoYT} />
+      <VideoYT videoID="u45e_Hche8g" addClass={styles.videoYT} />
       <UxResearch />
       <OldPage />
       <DesignProcess />
@@ -31,6 +35,14 @@ export const Dinamo = () => {
       <JourneyMap />
       <Prototyping />
       <Usability />
+      <MobileFirst />
+      <Gallery />
+      <DesktopDemo />
+      <DescriptionKeys
+        addClass={styles.descriptionKeys}
+        description="На этом работа над проектом не заканчивается. Проверка вёрстки, плавности анимации, скринкасты метрики и правки. Всё это необходимо для достижения результатов."
+        link="stadium-dinamo.by"
+      />
       <Navigation nextLink="/itec" />
     </>
   );

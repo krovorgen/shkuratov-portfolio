@@ -18,7 +18,7 @@
   }
 }
 
-.descr {
+.subtitle {
   margin-bottom: 24px;
 
   @include media($sm) {
@@ -41,30 +41,46 @@
 
 .items {
   &:first-child {
-    margin-top: 70px;
+    .item {
+      &:not(:last-child) {
+        margin-bottom: 120px;
+
+        @include media($sm) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+
+  &:last-child {
+    margin-top: 140px;
 
     @include media($sm) {
-      margin-top: 32px;
+      margin-top: 60px;
     }
   }
 
   &:not(:last-child) {
-    margin-right: 100px;
+    margin-right: 118px;
 
     @include media($sm) {
-      margin-right: 16px;
+      margin-right: 8px;
+    }
+  }
+
+  &:not(:first-child) {
+    .item {
+      &:not(:last-child) {
+        margin-bottom: 133px;
+
+        @include media($sm) {
+          margin-bottom: 56px;
+        }
+      }
     }
   }
 }
 
 .item {
   width: 100%;
-
-  &:not(:last-child) {
-    margin-bottom: 84px;
-
-    @include media($sm) {
-      margin-bottom: 24px;
-    }
-  }
 }

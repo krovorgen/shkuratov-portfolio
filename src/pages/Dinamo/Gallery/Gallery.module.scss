@@ -1,0 +1,30 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.root {
+  margin-bottom: 160px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.office {
+  margin-bottom: 120px;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+  }
+}
+
+.sportsman {
+  margin-bottom: 160px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+
+  img {
+    margin-left: auto;
+  }
+}

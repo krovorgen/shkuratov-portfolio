@@ -9,12 +9,6 @@
   }
 }
 
-.container {
-  @include media($sm) {
-    padding: 0;
-  }
-}
-
 .descr {
   margin-bottom: 24px;
   max-width: 519px;

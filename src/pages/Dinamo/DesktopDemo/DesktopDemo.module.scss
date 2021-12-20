@@ -1,0 +1,41 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.root {
+  margin-bottom: 120px;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  background-color: #0b0b0b;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+    padding-top: 16px;
+    padding-bottom: 32px;
+  }
+}
+
+.subtitle {
+  margin-bottom: 56px;
+
+  @include media($sm) {
+    margin-bottom: 16px;
+  }
+}
+
+.items {
+  column-count: 3;
+  column-gap: 44px;
+
+  @include media($md) {
+    column-count: 2;
+    column-gap: 20px;
+  }
+}
+
+.item {
+  margin-bottom: 56px;
+
+  @include media($md) {
+    margin-bottom: 20px;
+  }
+}

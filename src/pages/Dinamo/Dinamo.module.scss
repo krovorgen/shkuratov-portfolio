@@ -8,3 +8,11 @@
     margin-bottom: 40px;
   }
 }
+
+.descriptionKeys {
+  margin-bottom: 120px;
+
+  @include media($sm) {
+    margin-bottom: 40px;
+  }
+}
