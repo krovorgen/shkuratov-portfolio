@@ -16,10 +16,10 @@ import { Prototyping } from './Prototyping';
 import { MobileFirst } from './MobileFirst';
 import { Gallery } from './Gallery';
 import { Usability } from './Usability';
-
-import styles from './Dinamo.module.scss';
 import { DesktopDemo } from './DesktopDemo';
 import { DescriptionKeys } from '../../components/DescriptionKeys';
+
+import styles from './Dinamo.module.scss';
 
 export const Dinamo = () => {
   return (
