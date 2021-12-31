@@ -1,0 +1,79 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.root {
+  margin-bottom: 160px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.title {
+  margin-bottom: 24px;
+
+  @include media($sm) {
+    margin-bottom: 28px;
+  }
+}
+
+.text {
+  margin-bottom: 104px;
+  max-width: 440px;
+
+  @include media($sm) {
+    margin-bottom: 40px;
+  }
+}
+
+.video {
+  margin-bottom: 128px;
+
+  @include media($sm) {
+    margin-bottom: 40px;
+  }
+}
+
+.picture {
+  margin-bottom: 144px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.inner {
+  margin-bottom: 140px;
+  padding: 96px 0;
+  height: 1258px;
+  background-image: url("../../../images/ui-design-2.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-color: #0b0b0b;
+
+  @include media($lg) {
+    padding: 16px 0;
+    height: 500px;
+    background-size: 720px;
+  }
+
+  @include media($sm) {
+    margin-bottom: 40px;
+  }
+}
+
+.subtitle {
+  color: #fff;
+
+  mark {
+    display: block;
+  }
+}
+
+.wrap {
+  margin-bottom: 160px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
