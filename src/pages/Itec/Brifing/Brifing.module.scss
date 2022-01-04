@@ -20,6 +20,7 @@
 
 .text {
   margin-bottom: 48px;
+  max-width: 560px;
 
   @include media($sm) {
     margin-bottom: 24px;

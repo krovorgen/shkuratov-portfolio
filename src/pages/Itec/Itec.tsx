@@ -29,7 +29,7 @@ export const Itec = () => {
       <DescriptionKeys
         addClass={styles.descriptionKeys}
         description="Вся работа была сделана в кратчайшие сроки (7 дней). После утверждения дизайна макеты отправились к разработчикам. Проверяю вёрстку и метрики. Выдвигаю гипотезы по улучшению проекта опираясь на информацию из метрик. "
-        link="itec.by/"
+        link="itec.by"
       />
       <Navigation nextLink="/bomba" />
     </>

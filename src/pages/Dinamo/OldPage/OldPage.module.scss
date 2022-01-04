@@ -3,6 +3,10 @@
 
 .root {
   margin-bottom: 160px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
 }
 
 .wrap {

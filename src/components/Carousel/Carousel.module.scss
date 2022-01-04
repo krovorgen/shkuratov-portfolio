@@ -1,0 +1,39 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.scrollWrap {
+  max-height: 761px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+[data-attr="slider"] {
+  position: relative;
+  left: -6%;
+  margin-bottom: 45px;
+  transform: rotate(-17deg);
+  transform-origin: 10% 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.scrollRow {
+  position: relative;
+  left: 10%;
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.scrollItem {
+  margin-right: 30px;
+  height: 300px;
+  min-width: 534px;
+
+  img {
+    object-fit: cover;
+  }
+}

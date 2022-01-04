@@ -28,3 +28,12 @@
     margin-left: auto;
   }
 }
+
+.title {
+  margin-bottom: 56px;
+  color: #0B0B0B;
+
+  @include media($sm) {
+    margin-bottom: 16px;
+  }
+}

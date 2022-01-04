@@ -3,6 +3,8 @@ import React from 'react';
 import { PictureWithDescr } from '../../../components/PictureWithDescr';
 import { Title } from '../../../components/Title';
 import { Paragraph } from '../../../components/Paragraph';
+import gif1 from '../../../images/gifs/1.gif';
+import gif2 from '../../../images/gifs/2.gif';
 
 import styles from './Prototyping.module.scss';
 
@@ -44,6 +46,14 @@ export const Prototyping = () => {
               <PictureWithDescr pathImg="dinamo/prototyping-6.png" description="Оформление заказа" />
             </li>
           </ul>
+        </div>
+        <Title tag="h3" addClass={styles.subtitle}>
+          Большой упор делается на <mark>микровзаимодействия</mark>. Эффекты наведения. Cостояния интерактивных
+          элементов.
+        </Title>
+        <div className={styles.inner}>
+          <img src={gif1} alt="Презентация" />
+          <img src={gif2} alt="Презентация" />
         </div>
       </div>
     </section>

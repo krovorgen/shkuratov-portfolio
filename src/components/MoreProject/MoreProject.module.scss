@@ -21,12 +21,3 @@
     font-size: 24px;
   }
 }
-
-.inner {
-  height: 760px;
-  background-color: #000;
-
-  @include media($sm) {
-    height: 170px;
-  }
-}

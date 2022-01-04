@@ -14,7 +14,7 @@ export const JourneyMap = () => {
         <div className="container">
           <div className={styles.element}>
             <Title tag="h3" addClass={styles.title}>
-              Составляю <mark>Сustomer Journey Map</mark>
+              Составляю <mark>Сustomer Journey&nbsp;Map</mark>
             </Title>
             <Paragraph addClass={styles.text}>
               Карта взаимодействия пользователя с продуктом помогает определить все болевые точки и наметить пути их
@@ -24,7 +24,7 @@ export const JourneyMap = () => {
           </div>
           <div className={styles.element}>
             <Title tag="h3" addClass={styles.title}>
-              Прорабатываю основные <mark>User flows</mark>
+              Прорабатываю основные <mark>User&nbsp;flows</mark>
             </Title>
             <Paragraph addClass={styles.text}>
               Пути пользователя помогают посмотреть на взаимодействие под другим углом и упростить процесс достижения

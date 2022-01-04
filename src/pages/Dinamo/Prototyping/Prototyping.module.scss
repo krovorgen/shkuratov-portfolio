@@ -37,6 +37,11 @@
 
 .wrap {
   display: flex;
+  margin-bottom: 160px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
 }
 
 .items {
@@ -65,6 +70,44 @@
 
     @include media($sm) {
       margin-bottom: 24px;
+    }
+  }
+}
+
+.subtitle {
+  margin-bottom: 160px;
+  color: #0b0b0b;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: flex-start;
+
+  @include media($md) {
+    flex-direction: column;
+  }
+
+  img {
+    @include media($md) {
+      width: 100%;
+    }
+
+    &:last-child {
+      margin-top: 150px;
+      margin-left: 120px;
+
+      @include media($xl) {
+        margin-left: 30px;
+      }
+
+      @include media($md) {
+        margin-top: 8px;
+        margin-left: 0;
+      }
     }
   }
 }
