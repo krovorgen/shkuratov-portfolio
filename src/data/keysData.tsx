@@ -14,7 +14,7 @@ export const keysData: KeysDataType[] = [
         Национальный олимпийский <span>стадион-динамо</span>
       </>
     ),
-    period: '5 минут',
+    period: '≈ 5 минут',
   },
   {
     name: 'itec',
@@ -24,7 +24,7 @@ export const keysData: KeysDataType[] = [
         <span>IT-курсы</span> для программистов
       </>
     ),
-    period: '4 минут',
+    period: '≈ 4 минут',
   },
   {
     name: 'bomba',
@@ -34,6 +34,6 @@ export const keysData: KeysDataType[] = [
         Интернет-магазин <span>пиротехники</span>
       </>
     ),
-    period: '5 минут',
+    period: '≈ 5 минут',
   },
 ];

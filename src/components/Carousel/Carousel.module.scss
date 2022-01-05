@@ -5,6 +5,10 @@
   max-height: 761px;
   overflow: hidden;
   background-color: #000;
+
+  @include media($sm) {
+    max-height: 170px;
+  }
 }
 
 [data-attr="slider"] {
@@ -13,6 +17,10 @@
   margin-bottom: 45px;
   transform: rotate(-17deg);
   transform-origin: 10% 0;
+
+  @include media($sm) {
+    margin-bottom: 10px;
+  }
 
   &:nth-child(even) {
     .scrollRow {
@@ -37,6 +45,12 @@
   margin-right: 30px;
   height: 300px;
   min-width: 534px;
+
+  @include media($sm) {
+    margin-right: 6px;
+    height: 68px;
+    min-width: 120px;
+  }
 
   img {
     object-fit: cover;

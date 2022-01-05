@@ -4,40 +4,48 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const imagesFirst: string[] = [
-    './images/Carousel/1.png', './images/Carousel/2.png', './images/Carousel/3.png',
-    './images/Carousel/1.png', './images/Carousel/2.png', './images/Carousel/3.png',
-    './images/Carousel/1.png', './images/Carousel/2.png', './images/Carousel/3.png',
-
+  './images/Carousel/1.png',
+  './images/Carousel/2.png',
+  './images/Carousel/3.png',
+  './images/Carousel/1.png',
+  './images/Carousel/2.png',
+  './images/Carousel/3.png',
+  './images/Carousel/1.png',
+  './images/Carousel/2.png',
+  './images/Carousel/3.png',
 ];
 const imagesSecond: string[] = [
   './images/Carousel/4.png',
   './images/Carousel/5.png',
   './images/Carousel/6.png',
   './images/Carousel/7.png',
-    './images/Carousel/4.png',
+  './images/Carousel/4.png',
   './images/Carousel/5.png',
   './images/Carousel/6.png',
   './images/Carousel/7.png',
-    './images/Carousel/4.png',
-
+  './images/Carousel/4.png',
 ];
 const imagesThird: string[] = [
   './images/Carousel/8.png',
   './images/Carousel/9.png',
   './images/Carousel/10.png',
   './images/Carousel/11.png',
-    './images/Carousel/8.png',
+  './images/Carousel/8.png',
   './images/Carousel/9.png',
   './images/Carousel/10.png',
   './images/Carousel/11.png',
-    './images/Carousel/8.png',
-
+  './images/Carousel/8.png',
 ];
 const imagesFourth: string[] = [
-    './images/Carousel/12.png', './images/Carousel/13.png', './images/Carousel/14.png',
-    './images/Carousel/12.png', './images/Carousel/13.png', './images/Carousel/14.png',
-    './images/Carousel/12.png', './images/Carousel/13.png', './images/Carousel/14.png',
-
+  './images/Carousel/12.png',
+  './images/Carousel/13.png',
+  './images/Carousel/14.png',
+  './images/Carousel/12.png',
+  './images/Carousel/13.png',
+  './images/Carousel/14.png',
+  './images/Carousel/12.png',
+  './images/Carousel/13.png',
+  './images/Carousel/14.png',
 ];
 
 export const Carousel: FC = () => {
@@ -53,15 +61,16 @@ export const Carousel: FC = () => {
         { x },
         {
           x: xEnd,
-            speed:1000,
+          speed: 1000,
           scrollTrigger: {
             trigger: section!,
-            scrub: .5,
+            scrub: 0.5,
           },
         }
       );
     });
   }, []);
+
   return (
     <div className={styles.scrollWrap} ref={el}>
       <div {...sliderAttr}>
