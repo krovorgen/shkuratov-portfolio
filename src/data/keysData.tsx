@@ -26,14 +26,14 @@ export const keysData: KeysDataType[] = [
     ),
     period: '≈ 4 минут',
   },
-  {
-    name: 'bomba',
-    date: 'Февраль 2021',
-    title: (
-      <>
-        Интернет-магазин <span>пиротехники</span>
-      </>
-    ),
-    period: '≈ 5 минут',
-  },
+  // {
+  //   name: 'bomba',
+  //   date: 'Февраль 2021',
+  //   title: (
+  //     <>
+  //       Интернет-магазин <span>пиротехники</span>
+  //     </>
+  //   ),
+  //   period: '≈ 5 минут',
+  // },
 ];
