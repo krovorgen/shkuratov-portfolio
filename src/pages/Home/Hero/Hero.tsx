@@ -45,6 +45,7 @@ export const Hero: FC = () => {
           ))}
         </ul>
       </div>
+      <span id="keys" />
     </section>
   );
 };

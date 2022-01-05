@@ -1,5 +1,7 @@
 import React, { FC, memo } from 'react';
 import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+
 import cn from 'classnames';
 
 import { headerData } from '../../data/headerData';
@@ -34,14 +36,14 @@ export const Header: FC<HeaderProps> = memo(({ page }) => {
               </NavLink>
             </li>
             <li className={styles.item}>
-              <a className={styles.navigation} href="https://test.com" rel="noopener">
+              <a className={styles.navigation} href="/Резюме.pdf" target="_blank" rel="noopener">
                 Резюме
               </a>
             </li>
             <li className={styles.item}>
-              <a className={styles.navigation} href="https://test.com" rel="noopener">
+              <HashLink className={styles.navigation} smooth to="/#keys">
                 Проекты
-              </a>
+              </HashLink>
             </li>
           </ul>
         </nav>
