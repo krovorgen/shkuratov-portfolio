@@ -32,6 +32,7 @@
 
 .images {
   margin-bottom: 80px;
+  max-width: 420px;
 
   @include media($sm) {
     margin-bottom: 32px;
