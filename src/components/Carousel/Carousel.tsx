@@ -3,12 +3,7 @@ import styles from './Carousel.module.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const imagesFirst: string[] = [
-  './images/Carousel/1.png',
-  './images/Carousel/2.png',
-  './images/Carousel/3.png',
-  './images/Carousel/7.png',
-];
+const imagesFirst: string[] = ['./images/Carousel/1.png', './images/Carousel/2.png', './images/Carousel/3.png'];
 const imagesSecond: string[] = [
   './images/Carousel/4.png',
   './images/Carousel/5.png',
@@ -21,12 +16,7 @@ const imagesThird: string[] = [
   './images/Carousel/10.png',
   './images/Carousel/11.png',
 ];
-const imagesFourth: string[] = [
-  './images/Carousel/12.png',
-  './images/Carousel/13.png',
-  './images/Carousel/14.png',
-  './images/Carousel/2.png',
-];
+const imagesFourth: string[] = ['./images/Carousel/12.png', './images/Carousel/13.png', './images/Carousel/14.png'];
 
 export const Carousel: FC = () => {
   const sliderAttr = { 'data-attr': 'slider' };
