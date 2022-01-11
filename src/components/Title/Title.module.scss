@@ -10,6 +10,10 @@
   @include media($sm) {
     font-size: 24px;
   }
+
+  mark {
+    color: #ee322c;
+  }
 }
 
 .subtitle {

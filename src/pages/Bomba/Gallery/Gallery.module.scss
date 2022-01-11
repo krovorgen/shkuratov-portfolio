@@ -1,0 +1,28 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.root {
+  margin-bottom: 160px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.fullImg {
+  @include media($xl) {
+    display: none;
+  }
+}
+
+.items {
+  @include min-media($xl) {
+    display: none;
+  }
+}
+
+.item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}

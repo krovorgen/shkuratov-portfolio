@@ -1,0 +1,127 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.root {
+  margin-bottom: 160px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.title {
+  margin-bottom: 24px;
+
+  @include media($sm) {
+    margin-bottom: 8px;
+  }
+}
+
+.text {
+  margin-bottom: 56px;
+  max-width: 440px;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+  }
+}
+
+.items {
+  margin-bottom: 120px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.item {
+  max-width: 860px;
+
+  &:last-child {
+    margin-left: auto;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 56px;
+
+    @include media($sm) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.pretitle {
+  margin-bottom: 56px;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+  }
+}
+
+.map {
+  margin-bottom: 136px;
+  max-width: 628px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.subtitle {
+  margin-bottom: 120px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.oldSite {
+  margin-bottom: 80px;
+
+  @include media($sm) {
+    margin-bottom: 40px;
+  }
+}
+
+.metrics {
+  margin-bottom: 160px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.mainProblem {
+  margin-bottom: 56px;
+  max-width: 500px;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+  }
+}
+
+.oldSiteMetrics {
+  margin-bottom: 168px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.sripts {
+  margin-bottom: 24px;
+  max-width: 630px;
+
+  @include media($sm) {
+    margin-bottom: 8px;
+  }
+}
+
+.descr {
+  margin-bottom: 56px;
+  max-width: 570px;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+  }
+}

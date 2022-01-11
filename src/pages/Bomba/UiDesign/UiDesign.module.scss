@@ -1,0 +1,72 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.root {
+  margin-bottom: 160px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.title {
+  margin-bottom: 32px;
+
+  @include media($sm) {
+    margin-bottom: 16px;
+  }
+}
+
+.text {
+  margin-bottom: 104px;
+  max-width: 488px;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+  }
+}
+
+.items {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.item {
+  &:nth-child(2) {
+    margin-top: 108px;
+
+    @include media($xl) {
+      margin-top: 56px;
+    }
+  }
+
+  &:nth-child(3) {
+    margin-top: 28px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 130px;
+
+    @include media($xl) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.element {
+  &:not(:last-child) {
+    margin-bottom: 100px;
+
+    @include media($xl) {
+      margin-bottom: 16px;
+    }
+  }
+
+  img {
+    max-width: 300px;
+
+    @include media($xl) {
+      max-width: 100%;
+    }
+  }
+}
