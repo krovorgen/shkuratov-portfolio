@@ -22,7 +22,7 @@ export const Bomba = () => {
       <Header page="bomba" />
       <HeroSection page="bomba" data={bomba} />
       <Stats data={bombaStats} />
-      <VideoYT videoID="ql9TiOhGx0s" addClass={styles.videoYT} />
+      <VideoYT videoID="SLgJJbMMOWE" addClass={styles.videoYT} />
       <Briffing />
       <UxResearch />
       <Analysis />
