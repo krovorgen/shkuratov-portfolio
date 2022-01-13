@@ -24,7 +24,7 @@ export const keysData: KeysDataType[] = [
         <span>IT-курсы</span> для программистов
       </>
     ),
-    period: '≈ 4 минут',
+    period: '≈ 4 минуты',
   },
   {
     name: 'bomba',
