@@ -8,18 +8,20 @@ import styles from './Keys.module.scss';
 
 export const Keys: FC = () => {
   return (
-    <section className={styles['keys']}>
+    <section className={styles.keys}>
       <div className="container">
-        <ul className={styles['items']}>
+        <ul className={styles.items}>
           {keysData.map((item, index) => (
-            <li className={`${styles.item} ${styles[item.name]}`} key={index}>
-              <time className={styles.date}>{item.date}</time>
-              <h2 className={styles.title}>{item.title}</h2>
-              <div className={styles.bottom}>
-                <NavLink className={styles.link} to={`/${item.name}`}>
+            <li className={styles.item} key={index}>
+              <div className={styles.info}>
+                <h2 className={styles.title}>{item.title}</h2>
+                <p className={styles.text}>{item.text}</p>
+                <NavLink className={styles.link} to={item.url}>
                   <Button variant="span">Смотреть кейс</Button>
                 </NavLink>
-                <p className={styles.reading}>{item.period}</p>
+              </div>
+              <div className={styles.img}>
+                <img src={item.imgPath} width={658} height={528} alt={item.title} />
               </div>
             </li>
           ))}

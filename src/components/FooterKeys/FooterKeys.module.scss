@@ -1,0 +1,41 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.footer {
+  text-align: center;
+}
+
+.link {
+  margin-bottom: 160px;
+
+  @include media($sm) {
+    margin-bottom: 64px;
+  }
+}
+
+.text {
+  position: relative;
+  height: 115px;
+  overflow: hidden;
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 120%;
+  color: #f1f0f0;
+
+  @include media($md) {
+    height: 50px;
+    font-size: 42px;
+  }
+
+  span {
+    position: absolute;
+    left: 50%;
+    bottom: -28px;
+    white-space: nowrap;
+    transform: translateX(-50%);
+
+    @include media($md) {
+      bottom: -10px;
+    }
+  }
+}

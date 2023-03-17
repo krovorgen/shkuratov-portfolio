@@ -1,39 +1,25 @@
+import dinamoImg from '../images/keys/dinamo.png';
+import itecImg from '../images/keys/itec.png';
+import { AppRoutes } from './routes';
+
 type KeysDataType = {
-  name: string;
-  date: string;
-  title: JSX.Element;
-  period: string;
+  url: AppRoutes;
+  imgPath: string;
+  text: string;
+  title: string;
 };
 
 export const keysData: KeysDataType[] = [
   {
-    name: 'dinamo',
-    date: 'Январь 2021',
-    title: (
-      <>
-        Национальный олимпийский <span>стадион-динамо</span>
-      </>
-    ),
-    period: '≈ 5 минут',
+    imgPath: dinamoImg,
+    url: AppRoutes.dinamo,
+    title: 'Национальный олимпийский стадион динамо',
+    text: 'Редизайн крупного корпоративного сайта. Новый функционал покупки услуг прямо на сайте',
   },
   {
-    name: 'itec',
-    date: 'Ноябрь 2020',
-    title: (
-      <>
-        <span>IT-курсы</span> для программистов
-      </>
-    ),
-    period: '≈ 4 минуты',
-  },
-  {
-    name: 'bomba',
-    date: 'Февраль 2021',
-    title: (
-      <>
-        Интернет-магазин <span>пиротехники</span>
-      </>
-    ),
-    period: '≈ 5 минут',
+    imgPath: itecImg,
+    url: AppRoutes.itec,
+    title: 'IT-курсы для программистов',
+    text: 'Курсы по it-специальностям с уникальной программой по трудоустройству StartWork',
   },
 ];

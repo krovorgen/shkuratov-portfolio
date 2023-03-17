@@ -5,15 +5,27 @@ type HeroDataType = {
 
 export const heroData: HeroDataType[] = [
   {
-    statistics: <>4 <span>года</span></>,
-    description: <><span>Опыт&nbsp;работы</span>&nbsp;с&nbsp;крупными проектами</>,
+    statistics: <>&gt;1&nbsp;500&nbsp;000</>,
+    description: (
+      <>
+        Человек взаимодействуют <br /> c&nbsp;моим дизайном ежедневно
+      </>
+    ),
   },
   {
     statistics: <>50+</>,
-    description: <>Реализованных <span>проектов</span></>,
+    description: (
+      <>
+        Реализованных <br /> проектов
+      </>
+    ),
   },
   {
-    statistics: <>&gt;1 400 000</>,
-    description: <><span>Человек</span> взаимодействуют c&nbsp;моим&nbsp;дизайном <span>ежедневно</span></>,
+    statistics: <>5+</>,
+    description: (
+      <>
+        Лет опыт работы <br /> дизайнером
+      </>
+    ),
   },
 ];

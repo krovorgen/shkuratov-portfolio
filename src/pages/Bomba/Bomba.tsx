@@ -15,21 +15,26 @@ import { UiDesign } from './UiDesign';
 import { Gallery } from './Gallery';
 
 import styles from './Bomba.module.scss';
+import { FooterKeys } from '../../components/FooterKeys';
+import { AppRoutes } from '../../data/routes';
 
 export const Bomba = () => {
   return (
     <>
-      <Header page="bomba" />
-      <HeroSection page="bomba" data={bomba} />
-      <Stats data={bombaStats} />
-      <VideoYT videoID="SLgJJbMMOWE" addClass={styles.videoYT} />
-      <Briffing />
-      <UxResearch />
-      <Analysis />
-      <Proto />
-      <UiDesign />
-      <Gallery />
-      <Navigation nextLink="/dinamo" />
+      <main className="main">
+        <Header page="bomba" />
+        <HeroSection page="bomba" data={bomba} />
+        <Stats data={bombaStats} />
+        <VideoYT videoID="SLgJJbMMOWE" addClass={styles.videoYT} />
+        <Briffing />
+        <UxResearch />
+        <Analysis />
+        <Proto />
+        <UiDesign />
+        <Gallery />
+        <Navigation nextLink={AppRoutes.dinamo} />
+      </main>
+      <FooterKeys />
     </>
   );
 };

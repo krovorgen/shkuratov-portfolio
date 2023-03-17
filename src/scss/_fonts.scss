@@ -1,8 +1,8 @@
 @font-face {
   src:
-    url("../fonts/Formular-Light.woff2") format("woff2"),
-    url("../fonts/Formular-Light.woff") format("woff");
-  font-family: "Formular";
+    url("../fonts/Onest-Light.woff2") format("woff2"),
+    url("../fonts/Onest-Light.woff") format("woff");
+  font-family: "Onest";
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -10,9 +10,9 @@
 
 @font-face {
   src:
-    url("../fonts/Formular-Regular.woff2") format("woff2"),
-    url("../fonts/Formular-Regular.woff") format("woff");
-  font-family: "Formular";
+    url("../fonts/Onest-Regular.woff2") format("woff2"),
+    url("../fonts/Onest-Regular.woff") format("woff");
+  font-family: "Onest";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -20,9 +20,9 @@
 
 @font-face {
   src:
-    url("../fonts/Formular-Medium.woff2") format("woff2"),
-    url("../fonts/Formular-Medium.woff") format("woff");
-  font-family: "Formular";
+    url("../fonts/Onest-Medium.woff2") format("woff2"),
+    url("../fonts/Onest-Medium.woff") format("woff");
+  font-family: "Onest";
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -30,9 +30,9 @@
 
 @font-face {
   src:
-    url("../fonts/Formular-Bold.woff2") format("woff2"),
-    url("../fonts/Formular-Bold.woff") format("woff");
-  font-family: "Formular";
+    url("../fonts/Onest-Bold.woff2") format("woff2"),
+    url("../fonts/Onest-Bold.woff") format("woff");
+  font-family: "Onest";
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -40,9 +40,19 @@
 
 @font-face {
   src:
-    url("../fonts/Formular-Black.woff2") format("woff2"),
-    url("../fonts/Formular-Black.woff") format("woff");
-  font-family: "Formular";
+    url("../fonts/Onest-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Onest-ExtraBold.woff") format("woff");
+  font-family: "Onest";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src:
+    url("../fonts/Onest-Black.woff2") format("woff2"),
+    url("../fonts/Onest-Black.woff") format("woff");
+  font-family: "Onest";
   font-weight: 900;
   font-style: normal;
   font-display: swap;

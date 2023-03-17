@@ -1,0 +1,70 @@
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
+
+.section {
+  margin-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-image: url("../../images/premium-keys/bg.png"), linear-gradient(180deg, #00809c 0%, #04607d 100%);
+  background-size: auto 100%, auto;
+  background-repeat: no-repeat;
+
+  @include media("1590px") {
+    background-position: left -300px center, 0 0;
+  }
+
+  @include media($xl) {
+    background-position: left -450px center, 0 0;
+  }
+
+  @include media($lg) {
+    padding-top: 323px;
+    padding-bottom: 40px;
+    background-position: 0 0, 0 0;
+    background-size: auto 291px, auto;
+  }
+
+  @include media($sm) {
+    margin-bottom: 64px;
+  }
+}
+
+.wrap {
+  @include min-media($lg) {
+    margin-left: auto;
+    max-width: 400px;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  color: #fff;
+
+  @include media($sm) {
+    margin-bottom: 16px;
+    font-size: 24px;
+  }
+}
+
+.text {
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+}
+
+.link {
+  > span {
+    @include media($sm) {
+      width: 100%;
+    }
+  }
+}

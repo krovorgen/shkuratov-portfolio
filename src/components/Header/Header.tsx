@@ -7,14 +7,14 @@ import cn from 'classnames';
 import { headerData } from '../../data/headerData';
 
 import styles from './Header.module.scss';
+import { AppRoutes } from '../../data/routes';
 
 type HeaderProps = {
-  page?: 'about' | 'dinamo' | 'itec' | 'bomba';
+  page?: 'dinamo' | 'itec' | 'bomba';
 };
 
 export const Header: FC<HeaderProps> = memo(({ page }) => {
   const appearances = {
-    [styles.aboutPage]: page === 'about',
     [styles.dinamoPage]: page === 'dinamo',
     [styles.itecPage]: page === 'itec',
     [styles.bombaPage]: page === 'bomba',
@@ -31,19 +31,19 @@ export const Header: FC<HeaderProps> = memo(({ page }) => {
         <nav className={styles.menu}>
           <ul className={styles.items}>
             <li className={styles.item}>
-              <NavLink to="/about" className={styles.navigation}>
-                Эбаут
-              </NavLink>
+              <HashLink className={styles.navigation} smooth to="/#keys">
+                Кейсы
+              </HashLink>
             </li>
             <li className={styles.item}>
-              <a className={styles.navigation} href="/Резюме.pdf" target="_blank" rel="noopener">
+              <a className={styles.navigation} href="/EvgenyShkuratovCV.pdf" target="_blank" rel="noopener">
                 Резюме
               </a>
             </li>
             <li className={styles.item}>
-              <HashLink className={styles.navigation} smooth to="/#keys">
-                Проекты
-              </HashLink>
+              <NavLink to={AppRoutes.keys} activeClassName={styles.navigationActive} className={styles.navigation}>
+                Галерея проектов
+              </NavLink>
             </li>
           </ul>
         </nav>

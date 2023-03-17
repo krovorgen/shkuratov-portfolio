@@ -1,110 +1,85 @@
-@import "../../../scss/vars";
-@import "../../../scss/mixins";
+@import "./src/scss/vars";
+@import "./src/scss/mixins";
 
 .keys {
-  margin-bottom: 160px;
+  margin-bottom: 200px;
 
   @include media($sm) {
-    margin-bottom: 40px;
+    margin-bottom: 64px;
   }
+}
+
+.items {
+
 }
 
 .item {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 48px;
-  min-height: 353px;
-  background-position: bottom right;
-  background-size: 589px auto;
-  background-repeat: no-repeat;
-  background-color: #f1f0f0;
+  align-items: center;
+  gap: 102px;
 
   @include media($lg) {
-    padding: 8px;
-    background-size: 410px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 32px;
   }
 
-  @include media($md) {
-    justify-content: flex-start;
-    padding: 8px 8px 173px;
-    background-size: auto 148px;
+  &:nth-child(even) {
+    @include min-media($lg) {
+      flex-direction: row-reverse;
+    }
   }
 
   &:not(:last-child) {
-    margin-bottom: 40px;
-  }
+    margin-bottom: 200px;
 
-  &.dinamo {
-    background-image: url("../../../images/keys/dinamo.png");
-  }
-
-  &.itec {
-    background-image: url("../../../images/keys/itec.png");
-  }
-
-  &.bomba {
-    background-image: url("../../../images/keys/bomba.png");
+    @include media($lg) {
+      margin-bottom: 64px;
+    }
   }
 }
 
-.date {
-  margin-bottom: 11px;
-  font-size: 16px;
-  line-height: 1.4;
-  color: #8b8b8b;
+.info {
+  max-width: 400px;
 
-  @include media($md) {
-    margin-bottom: 16px;
-    font-size: 14px;
+  @include media($lg) {
+    max-width: 100%;
   }
 }
 
 .title {
-  margin-bottom: 40px;
-  max-width: 352px;
+  margin-bottom: 24px;
   font-weight: 500;
   font-size: 36px;
-  line-height: 1.2;
-  color: #8b8b8b;
+  line-height: 120%;
+  color: #0b0b0b;
 
-  @include media($md) {
-    margin-bottom: 24px;
+  @include media($sm) {
+    margin-bottom: 16px;
     font-size: 24px;
   }
-
-  span {
-    font-weight: 700;
-    color: #0b0b0b;
-  }
 }
 
-.bottom {
-  display: flex;
-  align-items: center;
-
-  @include media($md) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.reading {
-  font-weight: 500;
+.text {
+  margin-bottom: 40px;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 150%;
   color: #8b8b8b;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
 }
 
 .link {
-  margin-right: 19px;
 
-  @include media($md) {
-    margin-right: 0;
-    margin-bottom: 8px;
-    width: 100%;
+}
 
-    span {
+.img {
+  img {
+    @include media($lg) {
       width: 100%;
     }
   }

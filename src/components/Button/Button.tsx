@@ -8,6 +8,7 @@ type DefaultLinkPropsType = DetailedHTMLProps<LinkHTMLAttributes<HTMLAnchorEleme
 export interface IButtonProps {
   addClass?: string;
   href?: string;
+  appearances?: 'accent' | 'primary';
   variant?: 'span';
 }
 
@@ -16,21 +17,27 @@ export const Button: FC<IButtonProps & DefaultButtonPropsType & DefaultLinkProps
   href,
   children,
   variant,
+  appearances = 'primary',
   ...props
 }) => {
+  const appearancesVariant = {
+    [styles.primary]: appearances === 'primary',
+    [styles.accent]: appearances === 'accent',
+  };
+
   if (variant === 'span') {
     return (
-      <span className={cn(styles.button, addClass)} {...props}>
+      <span className={cn(styles.button, appearancesVariant, addClass)} {...props}>
         {children}
       </span>
     );
   }
   return href ? (
-    <a className={cn(styles.button, addClass)} href={href} {...props}>
+    <a className={cn(styles.button, appearancesVariant, addClass)} href={href} {...props}>
       {children}
     </a>
   ) : (
-    <button className={cn(styles.button, addClass)} {...props}>
+    <button className={cn(styles.button, appearancesVariant, addClass)} {...props}>
       {children}
     </button>
   );

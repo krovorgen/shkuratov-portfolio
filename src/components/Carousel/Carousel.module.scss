@@ -2,19 +2,23 @@
 @import "./src/scss/mixins";
 
 .scrollWrap {
-  max-height: 761px;
+  margin-bottom: 48px;
+  max-height: 320px;
   overflow: hidden;
   background-color: #000;
 
   @include media($sm) {
-    max-height: 170px;
+    margin-right: -10px;
+    margin-bottom: 24px;
+    margin-left: -10px;
+    max-height: 80px;
   }
 }
 
 [data-attr="slider"] {
   position: relative;
   left: -6%;
-  margin-bottom: 45px;
+  margin-bottom: 22px;
   transform: rotate(-17deg);
   transform-origin: 10% 0;
 
@@ -42,17 +46,19 @@
 }
 
 .scrollItem {
-  margin-right: 30px;
-  height: 300px;
-  min-width: 534px;
+  margin-right: 16px;
+  height: 175px;
+  min-width: 311px;
 
   @include media($sm) {
     margin-right: 6px;
-    height: 68px;
-    min-width: 120px;
+    height: 48px;
+    min-width: 86px;
   }
 
   img {
+    display: block;
+    height: auto;
     object-fit: cover;
   }
 }

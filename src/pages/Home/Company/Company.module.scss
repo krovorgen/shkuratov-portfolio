@@ -2,89 +2,48 @@
 @import "../../../scss/mixins";
 
 .root {
-  margin-bottom: 33px;
+  margin-bottom: 193px;
 
   @include media($sm) {
-    margin-bottom: 8px;
+    margin-bottom: 80px;
   }
 }
 
-.wrap {
+.swiper {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    z-index: 1000;
+    width: 600px;
+    height: 130px;
+    transform: translateY(-50%);
+
+    @include media($sm) {
+      display: none;
+    }
+  }
+
+  &::before {
+    left: 0;
+    background-image: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &::after {
+    right: 0;
+    background-image: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+
+.container {
   display: flex;
-
-  @include media($lg) {
-    flex-direction: column;
-  }
+  flex-direction: column;
+  min-height: 64px;
 }
 
-.info {
-  margin-right: 140px;
-
-  @include media($xl) {
-    margin-right: 48px;
-  }
-
-  @include media($lg) {
-    margin-right: 0;
-    margin-bottom: 32px;
-  }
-}
-
-.images {
-  margin-bottom: 80px;
-  max-width: 420px;
-
-  @include media($sm) {
-    margin-bottom: 32px;
-  }
-
-  img {
-    @include media($sm) {
-      width: 100%;
-    }
-  }
-}
-
-.text {
-  max-width: 430px;
-  font-size: 24px;
-  line-height: 1.4;
-  color: #8b8b8b;
-
-  @include media($sm) {
-    font-size: 14px;
-  }
-
-  mark {
-    font-weight: 500;
-    color: #0b0b0b;
-  }
-}
-
-.links {
-  column-count: 2;
-  column-gap: 40px;
-}
-
-.link {
-  margin-bottom: 64px;
-
-  @include media($sm) {
-    margin-bottom: 40px;
-  }
-
-  a {
-    font-size: 24px;
-    line-height: 130%;
-    color: #007bc2;
-
-    @include media($sm) {
-      font-size: 14px;
-    }
-
-    &:hover {
-      text-decoration-line: underline;
-      color: #005e94;
-    }
-  }
+.logo {
+  margin: auto;
 }

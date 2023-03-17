@@ -2,51 +2,25 @@ import React, { FC, useEffect } from 'react';
 import styles from './Carousel.module.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import slide1 from '../../images/carousel/1.png';
+import slide2 from '../../images/carousel/2.png';
+import slide3 from '../../images/carousel/3.png';
+import slide4 from '../../images/carousel/4.png';
+import slide5 from '../../images/carousel/5.png';
+import slide6 from '../../images/carousel/6.png';
+import slide7 from '../../images/carousel/7.png';
+import slide8 from '../../images/carousel/8.png';
+import slide9 from '../../images/carousel/9.png';
+import slide10 from '../../images/carousel/10.png';
+import slide11 from '../../images/carousel/11.png';
+import slide12 from '../../images/carousel/12.png';
+import slide13 from '../../images/carousel/13.png';
+import slide14 from '../../images/carousel/14.png';
 
-const imagesFirst: string[] = [
-  './images/Carousel/1.png',
-  './images/Carousel/2.png',
-  './images/Carousel/3.png',
-  './images/Carousel/1.png',
-  './images/Carousel/2.png',
-  './images/Carousel/3.png',
-  './images/Carousel/1.png',
-  './images/Carousel/2.png',
-  './images/Carousel/3.png',
-];
-const imagesSecond: string[] = [
-  './images/Carousel/4.png',
-  './images/Carousel/5.png',
-  './images/Carousel/6.png',
-  './images/Carousel/7.png',
-  './images/Carousel/4.png',
-  './images/Carousel/5.png',
-  './images/Carousel/6.png',
-  './images/Carousel/7.png',
-  './images/Carousel/4.png',
-];
-const imagesThird: string[] = [
-  './images/Carousel/8.png',
-  './images/Carousel/9.png',
-  './images/Carousel/10.png',
-  './images/Carousel/11.png',
-  './images/Carousel/8.png',
-  './images/Carousel/9.png',
-  './images/Carousel/10.png',
-  './images/Carousel/11.png',
-  './images/Carousel/8.png',
-];
-const imagesFourth: string[] = [
-  './images/Carousel/12.png',
-  './images/Carousel/13.png',
-  './images/Carousel/14.png',
-  './images/Carousel/12.png',
-  './images/Carousel/13.png',
-  './images/Carousel/14.png',
-  './images/Carousel/12.png',
-  './images/Carousel/13.png',
-  './images/Carousel/14.png',
-];
+const imagesFirst: string[] = [slide1, slide2, slide3, slide1, slide2, slide3, slide1, slide2, slide3];
+const imagesSecond: string[] = [slide4, slide5, slide6, slide7, slide4, slide5, slide6, slide7, slide4];
+const imagesThird: string[] = [slide8, slide9, slide10, slide11, slide8, slide9, slide10, slide11, slide8];
+const imagesFourth: string[] = [slide12, slide13, slide14, slide12, slide13, slide14, slide12, slide13, slide14];
 
 export const Carousel: FC = () => {
   const sliderAttr = { 'data-attr': 'slider' };
@@ -54,10 +28,10 @@ export const Carousel: FC = () => {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     el.current!.querySelectorAll<HTMLElement>('[data-attr="slider"]').forEach((section, index) => {
-      const w = section.querySelector<HTMLElement>('ul')!;
-      const [x, xEnd] = index % 2 ? ['20%', (w.scrollWidth - section.offsetWidth) * -0.2] : [w.scrollWidth * -0.2, 0];
+      const ul = section.querySelector<HTMLElement>('ul')!;
+      const [x, xEnd] = index % 2 ? ['20%', (ul.scrollWidth - section.offsetWidth) * -0.2] : [ul.scrollWidth * -0.2, 0];
       gsap.fromTo(
-        w,
+        ul,
         { x },
         {
           x: xEnd,
@@ -77,7 +51,7 @@ export const Carousel: FC = () => {
         <ul className={styles.scrollRow}>
           {imagesFirst.map((item, index) => (
             <li key={index + 1} className={styles.scrollItem}>
-              <img src={item} width="534" height="300" alt="Слайд" />
+              <img src={item} width="311" height="175" alt="Слайд" />
             </li>
           ))}
         </ul>
@@ -86,7 +60,7 @@ export const Carousel: FC = () => {
         <ul className={styles.scrollRow}>
           {imagesSecond.map((item, index) => (
             <li key={index + 1} className={styles.scrollItem}>
-              <img src={item} width="534" height="300" alt="Слайд" />
+              <img src={item} width="311" height="175" alt="Слайд" />
             </li>
           ))}
         </ul>
@@ -95,7 +69,7 @@ export const Carousel: FC = () => {
         <ul className={styles.scrollRow}>
           {imagesThird.map((item, index) => (
             <li key={index + 1} className={styles.scrollItem}>
-              <img src={item} width="534" height="300" alt="Слайд" />
+              <img src={item} width="311" height="175" alt="Слайд" />
             </li>
           ))}
         </ul>
@@ -104,7 +78,7 @@ export const Carousel: FC = () => {
         <ul className={styles.scrollRow}>
           {imagesFourth.map((item, index) => (
             <li key={index + 1} className={styles.scrollItem}>
-              <img src={item} width="534" height="300" alt="Слайд" />
+              <img src={item} width="311" height="175" alt="Слайд" />
             </li>
           ))}
         </ul>
