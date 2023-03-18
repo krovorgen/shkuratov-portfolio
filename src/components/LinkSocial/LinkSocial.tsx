@@ -28,6 +28,8 @@ export const LinkSocial: FC<ILinkSociallProps & DefaultLinkPropsType> = ({
   return (
     <a
       className={cn(styles['link-social'], styles[social], appearances, addClass)}
+      target="_blank"
+      rel="noreferrer"
       href={hrefSocial[social]}
       {...props}
     >

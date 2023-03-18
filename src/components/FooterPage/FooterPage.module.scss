@@ -47,6 +47,8 @@
 }
 
 .item {
+  display: block;
+
   &:not(:last-child) {
     margin-right: 24px;
   }

@@ -23,7 +23,7 @@ export const Header: FC<HeaderProps> = memo(({ page }) => {
   return (
     <header className={cn(styles.header, appearances)}>
       <div className={`container ${styles.container}`}>
-        <NavLink className={`logo ${styles.logo}`} to="/">
+        <NavLink className={`logo ${styles.logo}`} to={AppRoutes.home}>
           <svg>
             <use xlinkHref={`./images/sprite.svg#logo`} />
           </svg>

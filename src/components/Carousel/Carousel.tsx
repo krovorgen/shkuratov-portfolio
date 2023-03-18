@@ -16,6 +16,8 @@ import slide11 from '../../images/carousel/11.png';
 import slide12 from '../../images/carousel/12.png';
 import slide13 from '../../images/carousel/13.png';
 import slide14 from '../../images/carousel/14.png';
+import { NavLink } from 'react-router-dom';
+import { AppRoutes } from '../../data/routes';
 
 const imagesFirst: string[] = [slide1, slide2, slide3, slide1, slide2, slide3, slide1, slide2, slide3];
 const imagesSecond: string[] = [slide4, slide5, slide6, slide7, slide4, slide5, slide6, slide7, slide4];
@@ -24,7 +26,7 @@ const imagesFourth: string[] = [slide12, slide13, slide14, slide12, slide13, sli
 
 export const Carousel: FC = () => {
   const sliderAttr = { 'data-attr': 'slider' };
-  const el = React.useRef<HTMLDivElement>(null);
+  const el = React.useRef<HTMLAnchorElement>(null);
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     el.current!.querySelectorAll<HTMLElement>('[data-attr="slider"]').forEach((section, index) => {
@@ -46,7 +48,7 @@ export const Carousel: FC = () => {
   }, []);
 
   return (
-    <div className={styles.scrollWrap} ref={el}>
+    <NavLink className={styles.scrollWrap} ref={el} to={AppRoutes.keys}>
       <div {...sliderAttr}>
         <ul className={styles.scrollRow}>
           {imagesFirst.map((item, index) => (
@@ -83,6 +85,6 @@ export const Carousel: FC = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </NavLink>
   );
 };

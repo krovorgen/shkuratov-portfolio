@@ -2,6 +2,7 @@
 @import "./src/scss/mixins";
 
 .scrollWrap {
+  display: block;
   margin-bottom: 48px;
   max-height: 320px;
   overflow: hidden;

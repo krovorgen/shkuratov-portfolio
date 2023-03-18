@@ -2,10 +2,10 @@
 @import "./src/scss/mixins";
 
 .root {
-  margin-bottom: 95px;
+  margin-bottom: 200px;
 
   @include media($sm) {
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
 }
 

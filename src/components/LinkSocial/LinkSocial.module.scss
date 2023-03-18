@@ -28,7 +28,6 @@
 
   &:hover,
   &:active {
-    padding: 0;
     color: #fff;
 
     .imgHover {
@@ -69,6 +68,7 @@
   width: 100%;
   height: 100%;
   text-align: center;
+  transition: all 0.25s ease-in-out;
 
   @include media($sm) {
     padding: 0 16px;
@@ -101,7 +101,7 @@
 
   &:hover {
     .wrap {
-      background-image: linear-gradient(87.13deg, #eea054 0%, #d64763 51.04%, #b62a99 100%);
+      background-color: transparent;
     }
   }
 

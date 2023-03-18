@@ -12,20 +12,20 @@ export const FooterPage = () => {
   return (
     <footer className={styles.footer}>
       <div className="container">
-        <h2 className={styles.title}>Делюсь в инстаграме интересными мыслями и полезным контентом</h2>
+        <h2 className={styles.title}>Делюсь в&nbsp;инстаграме интересными мыслями и&nbsp;полезным контентом</h2>
         <ul className={styles.items}>
-          <li className={styles.item}>
+          <a target="_blank" rel="noreferrer" href="https://www.instagram.com/p/Cm1ZBW4teG4/" className={styles.item}>
             <img className={styles.img} width={271} height={271} src={post1img} alt="Instagram post" />
-          </li>
-          <li className={styles.item}>
+          </a>
+          <a target="_blank" rel="noreferrer" href="https://www.instagram.com/p/Cl0MRgOtlxp/" className={styles.item}>
             <img className={styles.img} width={271} height={271} src={post2img} alt="Instagram post" />
-          </li>
-          <li className={styles.item}>
+          </a>
+          <a target="_blank" rel="noreferrer" href="https://www.instagram.com/p/Ck5wqq8tBGe/" className={styles.item}>
             <img className={styles.img} width={271} height={271} src={post3img} alt="Instagram post" />
-          </li>
-          <li className={styles.item}>
+          </a>
+          <a target="_blank" rel="noreferrer" href="https://www.instagram.com/p/Cne38iVtzWZ/" className={styles.item}>
             <img className={styles.img} width={271} height={271} src={post4img} alt="Instagram post" />
-          </li>
+          </a>
         </ul>
         <LinkSocial addClass={styles.link} social="instagram">
           Перейти в instagram

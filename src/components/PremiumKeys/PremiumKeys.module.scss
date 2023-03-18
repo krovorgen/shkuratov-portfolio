@@ -25,7 +25,18 @@
   }
 
   @include media($sm) {
-    margin-bottom: 64px;
+    margin-bottom: $mb-sm-section;
+    padding-top: 0;
+    background-image: linear-gradient(180deg, #00809c 0%, #04607d 100%);
+    background-size: auto;
+  }
+}
+
+.imgMobile {
+  margin-bottom: 32px;
+
+  @include min-media($sm) {
+    display: none;
   }
 }
 

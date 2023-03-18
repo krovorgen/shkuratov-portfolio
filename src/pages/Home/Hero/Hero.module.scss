@@ -6,7 +6,7 @@
   padding-top: 192px;
 
   @include media($sm) {
-    margin-bottom: 64px;
+    margin-bottom: $mb-sm-section;
     padding-top: 158px;
   }
 }
@@ -70,5 +70,9 @@
 
   @include media($sm) {
     font-size: 14px;
+
+    br {
+      display: none;
+    }
   }
 }

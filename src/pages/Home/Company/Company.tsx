@@ -13,8 +13,8 @@ export const Company = () => {
       <Swiper
         className={styles.swiper}
         speed={1500}
-        slidesPerView={8}
         spaceBetween={112}
+        slidesPerView="auto"
         autoplay={{
           delay: 0,
           disableOnInteraction: false,
@@ -22,30 +22,25 @@ export const Company = () => {
         loop={true}
         breakpoints={{
           1200: {
-            slidesPerView: 8,
             spaceBetween: 112,
           },
           992: {
-            slidesPerView: 7,
             spaceBetween: 92,
           },
           768: {
-            slidesPerView: 6,
             spaceBetween: 72,
           },
           576: {
-            slidesPerView: 5,
             spaceBetween: 54,
           },
           320: {
-            slidesPerView: 3,
             spaceBetween: 32,
           },
         }}
         modules={[Autoplay]}
       >
         {companyData.map((el, index) => (
-          <SwiperSlide key={`${index} ${Math.random()}`}>
+          <SwiperSlide key={`${index} ${Math.random()}`} className={styles.slide}>
             <div className={styles.container}>
               <img
                 className={styles.logo}
@@ -58,7 +53,7 @@ export const Company = () => {
           </SwiperSlide>
         ))}
         {companyData.map((el, index) => (
-          <SwiperSlide key={`${index} ${Math.random()}`}>
+          <SwiperSlide key={`${index} ${Math.random()}`} className={styles.slide}>
             <div className={styles.container}>
               <img
                 className={styles.logo}
