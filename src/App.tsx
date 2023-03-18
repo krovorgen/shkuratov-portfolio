@@ -7,6 +7,7 @@ import { Itec } from './pages/Itec';
 import { ScrollToTop } from './components/ScrollToTop';
 import { AppRoutes } from './data/routes';
 import { Keys } from './pages/Keys';
+import { Ivr } from './pages/Ivr';
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
         <Route path={AppRoutes.dinamo} exact component={Dinamo} />
         <Route path={AppRoutes.itec} exact component={Itec} />
         <Route path={AppRoutes.keys} exact component={Keys} />
+        <Route path={AppRoutes.ivr} exact component={Ivr} />
       </ScrollToTop>
     </div>
   );

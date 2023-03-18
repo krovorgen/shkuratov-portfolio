@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Hero } from './Hero';
 import { Keys } from './Keys';
-import { MoreProject } from '../../components/MoreProject';
+import { MoreProject } from './MoreProject';
 import { Header } from '../../components/Header';
 import { Company } from './Company';
 import { FooterPage } from '../../components/FooterPage';

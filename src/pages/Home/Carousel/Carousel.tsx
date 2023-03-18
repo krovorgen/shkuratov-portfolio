@@ -2,22 +2,22 @@ import React, { FC, useEffect } from 'react';
 import styles from './Carousel.module.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import slide1 from '../../images/carousel/1.png';
-import slide2 from '../../images/carousel/2.png';
-import slide3 from '../../images/carousel/3.png';
-import slide4 from '../../images/carousel/4.png';
-import slide5 from '../../images/carousel/5.png';
-import slide6 from '../../images/carousel/6.png';
-import slide7 from '../../images/carousel/7.png';
-import slide8 from '../../images/carousel/8.png';
-import slide9 from '../../images/carousel/9.png';
-import slide10 from '../../images/carousel/10.png';
-import slide11 from '../../images/carousel/11.png';
-import slide12 from '../../images/carousel/12.png';
-import slide13 from '../../images/carousel/13.png';
-import slide14 from '../../images/carousel/14.png';
+import slide1 from '../../../images/carousel/1.png';
+import slide2 from '../../../images/carousel/2.png';
+import slide3 from '../../../images/carousel/3.png';
+import slide4 from '../../../images/carousel/4.png';
+import slide5 from '../../../images/carousel/5.png';
+import slide6 from '../../../images/carousel/6.png';
+import slide7 from '../../../images/carousel/7.png';
+import slide8 from '../../../images/carousel/8.png';
+import slide9 from '../../../images/carousel/9.png';
+import slide10 from '../../../images/carousel/10.png';
+import slide11 from '../../../images/carousel/11.png';
+import slide12 from '../../../images/carousel/12.png';
+import slide13 from '../../../images/carousel/13.png';
+import slide14 from '../../../images/carousel/14.png';
 import { NavLink } from 'react-router-dom';
-import { AppRoutes } from '../../data/routes';
+import { AppRoutes } from '../../../data/routes';
 
 const imagesFirst: string[] = [slide1, slide2, slide3, slide1, slide2, slide3, slide1, slide2, slide3];
 const imagesSecond: string[] = [slide4, slide5, slide6, slide7, slide4, slide5, slide6, slide7, slide4];
@@ -37,7 +37,6 @@ export const Carousel: FC = () => {
         { x },
         {
           x: xEnd,
-          speed: 1000,
           scrollTrigger: {
             trigger: section!,
             scrub: 0.5,

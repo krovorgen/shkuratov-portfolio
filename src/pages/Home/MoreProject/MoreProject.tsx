@@ -3,8 +3,8 @@ import React, { FC } from 'react';
 import styles from './MoreProject.module.scss';
 import { Carousel } from '../Carousel';
 import { NavLink } from 'react-router-dom';
-import { AppRoutes } from '../../data/routes';
-import arrow from '../../images/arrow.svg';
+import { AppRoutes } from '../../../data/routes';
+import arrow from '../../../images/arrow.svg';
 
 export const MoreProject: FC = () => {
   return (

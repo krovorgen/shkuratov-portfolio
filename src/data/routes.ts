@@ -1,6 +1,6 @@
 export enum AppRoutes {
   home = '/',
-  keys = '/keys',
+  keys = '/freelance',
   bomba = '/bomba',
   dinamo = '/dinamo',
   itec = '/itec',
