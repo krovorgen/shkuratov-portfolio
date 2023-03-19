@@ -10,14 +10,15 @@ import styles from './Header.module.scss';
 import { AppRoutes } from '../../data/routes';
 
 type HeaderProps = {
-  page?: 'dinamo' | 'itec' | 'bomba';
+  page?: AppRoutes;
 };
 
 export const Header: FC<HeaderProps> = memo(({ page }) => {
   const appearances = {
-    [styles.dinamoPage]: page === 'dinamo',
-    [styles.itecPage]: page === 'itec',
-    [styles.bombaPage]: page === 'bomba',
+    [styles.dinamoPage]: page === AppRoutes.dinamo,
+    [styles.itecPage]: page === AppRoutes.itec,
+    [styles.bombaPage]: page === AppRoutes.bomba,
+    [styles.ivr]: page === AppRoutes.ivr,
   };
 
   return (

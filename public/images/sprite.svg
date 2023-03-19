@@ -25,4 +25,19 @@
       </clipPath>
     </defs>
   </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="figma">
+    <g clip-path="url(#a)">
+      <path d="M24 24a4.833 4.833 0 1 1 9.666 0A4.833 4.833 0 0 1 24 24z" fill="#1ABCFE"/>
+      <path d="M14.336 33.667a4.834 4.834 0 0 1 4.833-4.833h4.834v4.833a4.833 4.833 0 1 1-9.667 0z" fill="#0ACF83"/>
+      <path d="M24 9.5v9.667h4.833a4.833 4.833 0 0 0 0-9.667H24z" fill="#FF7262"/>
+      <path d="M14.336 14.333a4.833 4.833 0 0 0 4.833 4.834h4.834V9.5h-4.834a4.833 4.833 0 0 0-4.833 4.833z" fill="#F24E1E"/>
+      <path d="M14.336 24a4.833 4.833 0 0 0 4.833 4.833h4.834v-9.667h-4.834a4.833 4.833 0 0 0-4.833 4.833z" fill="#A259FF"/>
+    </g>
+    <path stroke="#0B0B0B" d="M.5.5h47v47H.5z"/>
+    <defs>
+      <clipPath id="a">
+        <path fill="#fff" transform="translate(14.336 9.5)" d="M0 0h19.333v29H0z"/>
+      </clipPath>
+    </defs>
+  </symbol>
 </svg>

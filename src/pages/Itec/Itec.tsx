@@ -21,7 +21,7 @@ export const Itec = () => {
   return (
     <>
       <main className="main">
-        <Header page="itec" />
+        <Header page={AppRoutes.itec} />
         <HeroSection page="itec" data={itec} />
         <Stats data={itecStats} />
         <VideoYT videoID="6yoCtv5jol4" addClass={styles.videoYT} />
@@ -34,7 +34,7 @@ export const Itec = () => {
           description="Вся работа была сделана в кратчайшие сроки (7 дней). После утверждения дизайна макеты отправились к разработчикам. Проверяю вёрстку и метрики. Выдвигаю гипотезы по улучшению проекта опираясь на информацию из метрик. "
           link="itec.by"
         />
-        <Navigation nextLink={AppRoutes.bomba} />
+        <Navigation nextLink={AppRoutes.ivr} />
       </main>
       <FooterKeys />
     </>

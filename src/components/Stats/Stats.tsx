@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 
 import styles from './Stats.module.scss';
+import cn from 'classnames';
 
 export type StatsSectionData = {
   head: { title: string; text: JSX.Element | string }[];
@@ -9,11 +10,12 @@ export type StatsSectionData = {
 
 export type StatsProps = {
   data: StatsSectionData;
+  addClass?: string;
 };
 
-export const Stats: FC<StatsProps> = ({ data }) => {
+export const Stats: FC<StatsProps> = ({ data, addClass }) => {
   return (
-    <div className={styles.root}>
+    <div className={cn(styles.root, addClass)}>
       <div className="container">
         <ul className={styles.items}>
           {data.head.map((el, index) => (
