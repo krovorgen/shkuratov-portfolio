@@ -7,10 +7,10 @@
   padding: 24px 0;
   width: 100%;
   background-color: #fff;
+  transition: background-color 0.3s ease-in-out;
 
   @include media($md) {
-    position: absolute;
-    padding: 12px 0;
+    padding: 16px 0;
   }
 
   &.dinamoPage {
@@ -24,43 +24,49 @@
   &.bombaPage {
     background-color: #eeeff2;
   }
+
+  &.transparent {
+    background-color: transparent;
+  }
 }
 
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  @include media($md) {
-    flex-wrap: wrap;
-  }
 }
 
 .logo {
+  position: relative;
+  z-index: 9999;
+
   svg {
     display: block;
   }
 }
 
 .menu {
-  @include media($md) {
-    order: 1;
-    margin-top: 24px;
-    width: 100%;
-  }
+  height: 100%;
 }
 
 .items {
   display: flex;
 
-  @include media($md) {
+  @include media($xl) {
+    flex-direction: column;
     justify-content: center;
+    height: 100%;
   }
 }
 
 .item {
   &:not(:last-child) {
     margin-right: 40px;
+
+    @include media($xl) {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -69,8 +75,8 @@
   line-height: 1.4;
   color: #0b0b0b;
 
-  @include media($sm) {
-    font-size: 14px;
+  @include media($xl) {
+    font-size: 20px;
   }
 
   &:hover {
@@ -84,14 +90,76 @@
 
 .socials {
   display: flex;
+  justify-content: center;
+  margin-top: auto;
 }
 
 .social {
   &:not(:last-child) {
     margin-right: 24px;
+
+    @include media($xl) {
+      margin-right: 40px;
+    }
   }
 }
 
 .link {
+  @include media($xl) {
+    img {
+      height: 40px;
+      min-width: 40px;
+    }
+  }
+}
 
+.mobileContainer {
+  position: fixed;
+  left: 0;
+  top: -100%;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 60px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #fff;
+  transition: top 0.3s ease-in-out;
+
+  @include min-media($xl) {
+    display: none;
+  }
+
+  &.mobileContainerVisible {
+    top: 0;
+  }
+}
+
+.desktopContainer {
+  @include media($xl) {
+    display: none;
+  }
+}
+
+.toggleBurger {
+  position: relative;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-color: transparent;
+
+  @include min-media($xl) {
+    display: none;
+  }
+
+  svg {
+    height: 100%;
+  }
 }
