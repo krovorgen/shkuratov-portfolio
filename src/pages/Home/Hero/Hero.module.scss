@@ -36,15 +36,44 @@
   @include media($lg) {
     flex-direction: column;
   }
+
+  @include media($sm) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .item {
+  &:nth-child(1) {
+    @include media($sm) {
+      order: 1;
+    }
+  }
+
+  &:nth-child(2) {
+    @include media($sm) {
+      margin-right: 48px !important;
+      margin-bottom: 24px !important;
+    }
+  }
+
+  &:nth-child(3) {
+    @include media($sm) {
+      margin-right: 24px !important;
+      margin-bottom: 24px !important;
+    }
+  }
+
   &:not(:last-child) {
     margin-right: 200px;
 
     @include media($lg) {
       margin-right: 0;
       margin-bottom: 24px;
+    }
+
+    @include media($sm) {
+      margin-bottom: 0;
     }
   }
 }
@@ -58,6 +87,7 @@
 
   @include media($sm) {
     margin-bottom: 8px;
+    font-weight: 700;
     font-size: 24px;
   }
 }
@@ -70,9 +100,5 @@
 
   @include media($sm) {
     font-size: 14px;
-
-    br {
-      display: none;
-    }
   }
 }
