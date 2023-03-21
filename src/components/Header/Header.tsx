@@ -56,16 +56,10 @@ export const Header: FC<HeaderProps> = memo(({ page }) => {
           <NavHeader onChangeVisibleBurger={toggleMenu} />
           <SocialHeader />
         </div>
-        <button className={styles.toggleBurger} onClick={toggleMenu}>
-          {isOpenBurger ? (
-            <svg>
-              <use xlinkHref={`./images/sprite.svg#cross`} />
-            </svg>
-          ) : (
-            <svg>
-              <use xlinkHref={`./images/sprite.svg#burger`} />
-            </svg>
-          )}
+        <button className={cn(styles.toggleBurger, { [styles.toggleBurgerActive]: isOpenBurger })} onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
         <NavHeader addClass={styles.desktopContainer} />
         <SocialHeader addClass={styles.desktopContainer} />

@@ -2,7 +2,6 @@ import React from 'react';
 import { Header } from '../../components/Header';
 import { Stats } from '../../components/Stats';
 import { ivr as ivrStats } from '../../data/StatsSectionData/ivr';
-import { VideoYT } from '../../components/VideoYT';
 import styles from './Ivr.module.scss';
 import { Navigation } from '../../components/Navigation';
 import { AppRoutes } from '../../data/routes';

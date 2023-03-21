@@ -4,13 +4,13 @@
 .header {
   position: fixed;
   z-index: 1000;
-  padding: 24px 0;
+  padding: 12px 0;
   width: 100%;
   background-color: #fff;
   transition: background-color 0.3s ease-in-out;
 
   @include media($md) {
-    padding: 16px 0;
+    padding: 8px 0;
   }
 
   &.dinamoPage {
@@ -91,7 +91,10 @@
 .socials {
   display: flex;
   justify-content: center;
-  margin-top: auto;
+
+  @include media($xl) {
+    margin-top: auto;
+  }
 }
 
 .social {
@@ -146,6 +149,7 @@
   position: relative;
   z-index: 9999;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0;
@@ -154,9 +158,40 @@
   height: 28px;
   border: none;
   background-color: transparent;
+  transform: rotate(0) translate(0, 0);
+  transition: transform 0.3s;
 
   @include min-media($xl) {
     display: none;
+  }
+
+  &Active {
+    span {
+      &:nth-child(1) {
+        transform: translateY(7px) translateX(0) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-7px) translateX(0) rotate(-45deg);
+      }
+    }
+  }
+
+  span {
+    display: block;
+    width: 20px;
+    height: 3px;
+    border-radius: 6px;
+    background-color: #212121;
+    transition: opacity 0.3s, transform 0.3s;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
   }
 
   svg {
