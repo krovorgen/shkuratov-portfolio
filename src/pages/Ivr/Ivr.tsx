@@ -45,6 +45,7 @@ import sliderContent12 from '../../images/ivrPage/sliderContent12.png';
 import sliderContent13 from '../../images/ivrPage/sliderContent13.png';
 import sliderContent14 from '../../images/ivrPage/sliderContent14.png';
 import { SliderImgContent } from './SliderImgContent';
+import { VideoVimeo } from '../../components/VideoVimeo';
 
 export const Ivr = () => {
   return (
@@ -59,7 +60,7 @@ export const Ivr = () => {
             и&nbsp;интересная идея. Моя задача учесть требования по&nbsp;функционалу, сроки, ресурс разработки
             и&nbsp;задизайнить крупный сервис
           </h2>
-          <VideoYT videoID="C-YUK_6H8us" addClass={styles['mb160-64']} />
+          <VideoVimeo addClass={styles['mb160-64']} />
           <div className={cn(styles['content--660'], styles['mb160-64'])}>
             <h3 className={styles.pretitle}>Первый этап. Сбор информации, анализ и&nbsp;проектирование</h3>
             <div className={styles.text}>
