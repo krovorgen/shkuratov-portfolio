@@ -27,7 +27,7 @@ export const Dinamo = () => {
   return (
     <>
       <main className="main">
-        <Header page={AppRoutes.dinamo} />
+        <Header />
         <HeroSection page="dinamo" data={dinamo} />
         <Stats data={dinamoStats} />
         <VideoYT videoID="u45e_Hche8g" addClass={styles.videoYT} />

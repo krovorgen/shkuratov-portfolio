@@ -1,93 +1,135 @@
-@import "./src/scss/vars";
-@import "./src/scss/mixins";
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
 
-.keys {
-  margin-bottom: 200px;
+.root {
+  margin-bottom: 136px;
 
   @include media($sm) {
-    margin-bottom: $mb-sm-section;
+    margin-bottom: 56px;
   }
 }
 
-.items {
-
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  gap: 102px;
-
-  @include media($lg) {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    gap: 32px;
-  }
-
-  &:nth-child(even) {
-    @include min-media($lg) {
-      flex-direction: row-reverse;
-    }
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 200px;
-
-    @include media($lg) {
-      margin-bottom: 64px;
-    }
-  }
-}
-
-.info {
-  max-width: 400px;
-
-  @include media($lg) {
-    max-width: 100%;
-  }
+.label {
+  margin-bottom: 24px;
 }
 
 .title {
-  margin-bottom: 24px;
-  font-weight: 500;
-  font-size: 36px;
+  margin: 0 auto 48px;
+  max-width: 644px;
+  font-weight: 600;
+  font-size: 56px;
   line-height: 120%;
-  color: #0b0b0b;
+  text-align: center;
+  color: #fff;
 
   @include media($sm) {
-    margin-bottom: 16px;
-    font-size: 24px;
+    margin-bottom: 32px;
+    font-size: 26px;
   }
 }
 
-.text {
-  margin-bottom: 40px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  color: #8b8b8b;
+.inner {
+  > * {
+    &:not(:last-child) {
+      margin-bottom: 40px;
 
-  @include media($sm) {
-    margin-bottom: 24px;
-    font-size: 14px;
-  }
-}
-
-.link {
-  @include media($sm) {
-    display: block;
-    width: 100%;
-
-    > * {
-      width: 100%;
+      @include media($sm) {
+        margin-bottom: 24px;
+      }
     }
   }
+}
+
+.box {
+  position: relative;
+  width: 100%;
 }
 
 .img {
+  margin-bottom: 16px;
+
+  @include media($sm) {
+    margin-bottom: 12px;
+  }
+
   img {
-    @include media($lg) {
-      width: 100%;
+    display: block;
+    height: auto;
+  }
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  &:not(.bodyWithSvg) {
+    @include media($md) {
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
+
+  &.bodyWithSvg {
+    svg {
+      @include media($sm) {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: #98989d;
+
+  @include media($sm) {
+    font-size: 14px;
+  }
+
+  mark {
+    font-weight: 500;
+    color: #fff;
+  }
+}
+
+.wrap {
+  display: flex;
+  gap: 44px;
+
+  @include media($sm) {
+    gap: 12px;
+  }
+}
+
+.developing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 16px;
+  min-height: 32px;
+  border: 1px solid #2b2b2b;
+  border-radius: 40px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  text-align: center;
+  color: #98989d;
+  background-color: #202020;
+
+  @include media($sm) {
+    min-height: 26px;
+    font-size: 12px;
+  }
+}
+
+.ghostLink {
+  position: absolute;
+  inset: 0;
 }

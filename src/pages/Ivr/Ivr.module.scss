@@ -1,9 +1,5 @@
-@import "./src/scss/vars";
-@import "./src/scss/mixins";
-
-.main {
-  background-color: #fafafa;
-}
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
 
 .mb160-64 {
   margin-bottom: 160px;

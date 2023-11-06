@@ -1,0 +1,21 @@
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
+
+.link {
+  transition: 0.3s color;
+  cursor: pointer;
+}
+
+.primary {
+  color: #969696;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.md {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+}

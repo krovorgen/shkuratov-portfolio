@@ -22,7 +22,7 @@ export const Bomba = () => {
   return (
     <>
       <main className="main">
-        <Header page={AppRoutes.bomba} />
+        <Header />
         <HeroSection page="bomba" data={bomba} />
         <Stats data={bombaStats} />
         <VideoYT videoID="SLgJJbMMOWE" addClass={styles.videoYT} />

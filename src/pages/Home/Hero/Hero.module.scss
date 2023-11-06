@@ -1,104 +1,162 @@
-@import "./src/scss/vars";
-@import "./src/scss/mixins";
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
 
-.hero {
-  margin-bottom: 170px;
-  padding-top: 192px;
+.root {
+  margin-top: 104px;
+  margin-bottom: 136px;
 
   @include media($sm) {
-    margin-bottom: $mb-sm-section;
-    padding-top: 158px;
+    margin-top: 56px;
+    margin-bottom: 56px;
+  }
+}
+
+.inner {
+  position: relative;
+}
+
+.info {
+
+}
+
+.label {
+  margin-bottom: 24px;
+
+  @include media($sm) {
+    margin-right: auto;
+    margin-bottom: 16px;
+    margin-left: auto;
+    width: fit-content;
   }
 }
 
 .title {
-  margin-bottom: 98px;
-  max-width: 1050px;
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 130%;
-  color: #8b8b8b;
+  margin-bottom: 48px;
+  max-width: 615px;
+  font-weight: 590;
+  font-size: 56px;
+  line-height: 120%;
+  color: #fff;
 
   @include media($sm) {
-    margin-bottom: 32px;
-    font-size: 24px;
-    line-height: 1.4;
+    margin-bottom: 24px;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  mark {
+    color: #98989d;
+  }
+}
+
+.wrap {
+  position: absolute;
+  right: 93px;
+  top: 88px;
+  padding: 32px 24px;
+  max-width: 250px;
+  border: 1px solid #2b2b2b;
+  border-radius: 16px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 145%;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #98989d;
+  background-color: #1e1e1e;
+
+  @include media($lg) {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin-right: 30px;
+    margin-bottom: 35px;
+    margin-left: 30px;
+    width: 100%;
+  }
+
+  @include media($sm) {
+    padding: 16px;
+    width: calc(100% - 60px);
+    max-width: none;
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  &::before {
+    left: -42px;
+    background-image: url("../../../images/homePage/Hero/decor-left.svg");
+
+    @include media($sm) {
+      left: -21px;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    width: 66px;
+    height: 172px;
+    background-repeat: no-repeat;
+
+    @include media($sm) {
+      width: 44px;
+      height: 102px;
+      background-size: cover;
+    }
+  }
+
+  &::after {
+    right: -42px;
+    background-image: url("../../../images/homePage/Hero/decor-right.svg");
+
+    @include media($sm) {
+      right: -21px;
+    }
+  }
+
+  mark {
+    font-weight: 590;
+    color: #e8fe55;
   }
 
   span {
-    color: #0b0b0b;
+    white-space: nowrap;
   }
 }
 
-.items {
-  display: flex;
+.icon {
+  position: absolute;
 
   @include media($lg) {
-    flex-direction: column;
+    display: none;
   }
 
-  @include media($sm) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
-.item {
-  &:nth-child(1) {
-    @include media($sm) {
-      order: 1;
-    }
+  &1 {
+    left: -88px;
+    top: -68px;
   }
 
-  &:nth-child(2) {
-    @include media($sm) {
-      margin-right: 48px !important;
-      margin-bottom: 24px !important;
-    }
+  &2 {
+    right: -95px;
+    top: -80px;
   }
 
-  &:nth-child(3) {
-    @include media($sm) {
-      margin-right: 24px !important;
-      margin-bottom: 24px !important;
-    }
+  &3 {
+    right: -80px;
+    bottom: -107px;
   }
 
-  &:not(:last-child) {
-    margin-right: 200px;
-
-    @include media($lg) {
-      margin-right: 0;
-      margin-bottom: 24px;
-    }
-
-    @include media($sm) {
-      margin-bottom: 0;
-    }
+  &4 {
+    left: -48px;
+    bottom: -92px;
   }
 }
 
-.statistics {
-  margin-bottom: 16px;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 120%;
-  color: #ee322c;
-
+.btn {
   @include media($sm) {
-    margin-bottom: 8px;
-    font-weight: 700;
-    font-size: 24px;
-  }
-}
-
-.description {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-  color: #0b0b0b;
-
-  @include media($sm) {
-    font-size: 14px;
+    width: 100%;
   }
 }

@@ -6,7 +6,7 @@ import styles from './Navigation.module.scss';
 import { AppRoutes } from '../../data/routes';
 
 interface INavigationProps {
-  nextLink: string;
+  nextLink?: string;
 }
 
 export const Navigation: FC<INavigationProps> = ({ nextLink }) => {
@@ -21,14 +21,16 @@ export const Navigation: FC<INavigationProps> = ({ nextLink }) => {
             На главную
           </span>
         </NavLink>
-        <NavLink className={cn(styles.link, styles.next)} to={nextLink}>
-          <span>
-            Следующий кейс
-            <svg>
-              <use xlinkHref={`./images/sprite.svg#arrow-right`} />
-            </svg>
-          </span>
-        </NavLink>
+        {nextLink && (
+          <NavLink className={cn(styles.link, styles.next)} to={nextLink}>
+            <span>
+              Следующий кейс
+              <svg>
+                <use xlinkHref={`./images/sprite.svg#arrow-right`} />
+              </svg>
+            </span>
+          </NavLink>
+        )}
       </div>
     </div>
   );

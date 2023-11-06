@@ -21,7 +21,7 @@ export const Itec = () => {
   return (
     <>
       <main className="main">
-        <Header page={AppRoutes.itec} />
+        <Header />
         <HeroSection page="itec" data={itec} />
         <Stats data={itecStats} />
         <VideoYT videoID="6yoCtv5jol4" addClass={styles.videoYT} />

@@ -1,47 +1,31 @@
 @font-face {
-  src: url("../fonts/Onest-Light.woff") format("woff");
-  font-family: "Onest";
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  src: url("../fonts/Onest-Regular.woff") format("woff");
-  font-family: "Onest";
+  src: url("../fonts/SFProDisplay-Regular.woff2") format("woff2");
+  font-family: "SF Pro";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  src: url("../fonts/Onest-Medium.woff") format("woff");
-  font-family: "Onest";
+  src: url("../fonts/SFProDisplay-Medium.woff2") format("woff2");
+  font-family: "SF Pro";
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  src: url("../fonts/Onest-Bold.woff") format("woff");
-  font-family: "Onest";
+  src: url("../fonts/SFProDisplay-Semibold.woff2") format("woff2");
+  font-family: "SF Pro";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("../fonts/SFProDisplay-Bold.woff2") format("woff2");
+  font-family: "SF Pro";
   font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  src: url("../fonts/Onest-ExtraBold.woff") format("woff");
-  font-family: "Onest";
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  src: url("../fonts/Onest-Black.woff") format("woff");
-  font-family: "Onest";
-  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }

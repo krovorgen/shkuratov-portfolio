@@ -1,33 +1,12 @@
-@import "./src/scss/vars";
-@import "./src/scss/mixins";
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
 
 .header {
-  position: fixed;
-  z-index: 1000;
-  padding: 12px 0;
+  padding: 16px 0;
   width: 100%;
-  background-color: #fff;
-  transition: background-color 0.3s ease-in-out;
-
-  @include media($md) {
-    padding: 8px 0;
-  }
-
-  &.dinamoPage {
-    background-color: #fff7ea;
-  }
-
-  &.itecPage {
-    background-color: #e2efed;
-  }
-
-  &.bombaPage {
-    background-color: #eeeff2;
-  }
-
-  &.transparent {
-    background-color: transparent;
-  }
+  box-shadow: 1px 1px 48px 0 rgba(255, 255, 255, 0.04) inset;
+  background-color: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(18px);
 }
 
 .container {
@@ -37,164 +16,112 @@
 }
 
 .logo {
-  position: relative;
-  z-index: 9999;
-
-  svg {
+  img {
     display: block;
   }
-}
-
-.menu {
-  height: 100%;
 }
 
 .items {
   display: flex;
+  gap: 48px;
 
-  @include media($xl) {
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+  @include media($lg) {
+    gap: 32px;
   }
 }
 
 .item {
-  &:not(:last-child) {
-    margin-right: 40px;
-
-    @include media($xl) {
-      margin-right: 0;
-      margin-bottom: 40px;
+  &:not(.itemMobile) {
+    @include media($md) {
+      display: none;
     }
   }
 }
 
-.navigation {
-  font-size: 16px;
-  line-height: 1.4;
-  color: #0b0b0b;
+.elements {
+  display: flex;
+  gap: 32px;
 
-  @include media($xl) {
-    font-size: 20px;
-  }
-
-  &:hover {
-    border-bottom: 2px solid #ee322c;
-  }
-
-  &Active {
-    color: #c3c3c3;
+  &:not(.elementsMobile) {
+    @include media($md) {
+      display: none;
+    }
   }
 }
 
-.socials {
-  display: flex;
-  justify-content: center;
+.element {
 
-  @include media($xl) {
-    margin-top: auto;
-  }
 }
 
 .social {
-  &:not(:last-child) {
-    margin-right: 24px;
 
-    @include media($xl) {
-      margin-right: 40px;
-    }
-  }
 }
 
-.link {
-  @include media($xl) {
-    img {
-      height: 40px;
-      min-width: 40px;
-    }
-  }
-}
-
-.mobileContainer {
-  position: fixed;
-  left: 0;
-  top: -100%;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  padding: 48px 60px;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background-color: #fff;
-  transition: top 0.3s ease-in-out;
-
-  @include min-media($xl) {
-    display: none;
-  }
-
-  &.mobileContainerVisible {
-    top: 0;
-  }
-}
-
-.desktopContainer {
-  @include media($xl) {
-    display: none;
-  }
-}
-
-.toggleBurger {
-  position: relative;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.burger {
   margin: 0;
   padding: 0;
-  width: 28px;
-  height: 28px;
   border: none;
   background-color: transparent;
-  transform: rotate(0) translate(0, 0);
-  transition: transform 0.3s;
 
-  @include min-media($xl) {
+  @include min-media($md) {
     display: none;
   }
+}
 
-  &Active {
-    span {
-      &:nth-child(1) {
-        transform: translateY(7px) translateX(0) rotate(45deg);
-      }
+.mobileMenu {
+  position: fixed;
+  z-index: 100;
+  height: 100vh;
+  overflow: auto;
+  border: 1px solid #2b2b2b;
+  background-color: #202020;
+  transform: translateX(-200%);
+  transition: transform 0.3s;
+  inset: 0;
 
-      &:nth-child(2) {
-        opacity: 0;
-      }
-
-      &:nth-child(3) {
-        transform: translateY(-7px) translateX(0) rotate(-45deg);
-      }
-    }
+  &Open {
+    transform: translateX(0);
   }
 
-  span {
-    display: block;
-    width: 20px;
-    height: 3px;
-    border-radius: 6px;
-    background-color: #212121;
-    transition: opacity 0.3s, transform 0.3s;
+  &Bg {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 12px 106px;
+    height: 100%;
+    background-image: url("../../images/Steps/bg-section.png");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-color: #202020;
+    mix-blend-mode: lighten;
+    gap: 16px;
+  }
+
+  &Burger {
+    margin: 0 0 0 auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  &List {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  &Item {
+    display: flex;
+    justify-content: center;
 
     &:not(:last-child) {
-      margin-bottom: 4px;
+      margin-bottom: 56px;
     }
   }
 
-  svg {
-    height: 100%;
+  &Btn {
+
   }
+}
+
+.activeLink {
+  opacity: 0.5;
 }

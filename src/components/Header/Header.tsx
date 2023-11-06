@@ -1,110 +1,134 @@
-import React, { FC, memo, useCallback, useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+import React, { FC, useEffect, useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import logo from '../../images/logo.svg';
+import instagram from '../../images/social-icons/instagram.svg';
+import linkedin from '../../images/social-icons/linkedin.svg';
+import burger from '../../images/homePage/Header/burger.svg';
+import burgerClose from '../../images/homePage/Header/burger-close.svg';
+import { Link as AnchorLink } from 'react-scroll';
 
 import cn from 'classnames';
 
-import { headerData } from '../../data/headerData';
-
 import styles from './Header.module.scss';
 import { AppRoutes } from '../../data/routes';
+import { Link as LinkUI } from '../Link/Link';
+import { SocialLink } from '../../data/socialLink';
+import { Button } from '../Button/Button';
 
-type HeaderProps = {
-  page?: AppRoutes;
-};
+type HeaderProps = {};
 
-export const Header: FC<HeaderProps> = memo(({ page }) => {
-  const [scrolled, setScrolled] = useState(false);
+export const Header: FC<HeaderProps> = () => {
+  const location = useLocation();
   const [isOpenBurger, setIsOpenBurger] = useState(false);
 
-  const toggleMenu = useCallback(() => {
+  const toggleMenu = () => {
     setIsOpenBurger((v) => !v);
-  }, []);
-
-  const appearances = {
-    [styles.dinamoPage]: page === AppRoutes.dinamo,
-    [styles.itecPage]: page === AppRoutes.itec,
-    [styles.bombaPage]: page === AppRoutes.bomba,
-    [styles.ivr]: page === AppRoutes.ivr,
-    [styles.transparent]: !scrolled && page === AppRoutes.ivr,
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
+    if (isOpenBurger) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [isOpenBurger]);
 
-      if (scrollTop > 0 && !scrolled) {
-        setScrolled(true);
-      } else if (scrollTop === 0 && scrolled) {
-        setScrolled(false);
-      }
-    };
+  const isMainPage = location.pathname === '/';
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [scrolled]);
+  const klondikeLink = (isMobileMenu: boolean = false) =>
+    isMainPage ? (
+      <AnchorLink to="klondike" smooth onClick={isMobileMenu ? toggleMenu : undefined}>
+        <LinkUI Component="span">Клондайк дизайнера</LinkUI>
+      </AnchorLink>
+    ) : (
+      <Link to="/#klondike" onClick={isMobileMenu ? toggleMenu : undefined}>
+        <LinkUI Component="span">Клондайк дизайнера</LinkUI>
+      </Link>
+    );
 
-  return (
-    <header className={cn(styles.header, appearances)}>
-      <div className={`container ${styles.container}`}>
-        <NavLink className={`logo ${styles.logo}`} to={AppRoutes.home}>
-          <svg>
-            <use xlinkHref={`./images/sprite.svg#logo`} />
-          </svg>
-        </NavLink>
-        <div className={cn(styles.mobileContainer, { [styles.mobileContainerVisible]: isOpenBurger })}>
-          <NavHeader onChangeVisibleBurger={toggleMenu} />
-          <SocialHeader />
-        </div>
-        <button className={cn(styles.toggleBurger, { [styles.toggleBurgerActive]: isOpenBurger })} onClick={toggleMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <NavHeader addClass={styles.desktopContainer} />
-        <SocialHeader addClass={styles.desktopContainer} />
-      </div>
-    </header>
+  const orderDesignLink = (isMobileMenu: boolean = false) =>
+    isMainPage ? (
+      <AnchorLink to="order-design" smooth onClick={isMobileMenu ? toggleMenu : undefined}>
+        <LinkUI Component="span">Заказать дизайн</LinkUI>
+      </AnchorLink>
+    ) : (
+      <Link to="/#order-design" onClick={isMobileMenu ? toggleMenu : undefined}>
+        <LinkUI Component="span">Заказать дизайн</LinkUI>
+      </Link>
+    );
+
+  const keysLink = (isMobileMenu: boolean = false) =>
+    isMainPage ? (
+      <AnchorLink to="keys" smooth onClick={isMobileMenu ? toggleMenu : undefined}>
+        <LinkUI Component="span">Портфолио</LinkUI>
+      </AnchorLink>
+    ) : (
+      <Link to="/#keys" onClick={isMobileMenu ? toggleMenu : undefined}>
+        <LinkUI Component="span">Портфолио</LinkUI>
+      </Link>
+    );
+
+  const mtrLink = () => (
+    <NavLink className={({ isActive }) => (isActive ? styles.activeLink : '')} to={AppRoutes.mtr}>
+      <LinkUI Component="span">Менторство</LinkUI>
+    </NavLink>
   );
-});
 
-const NavHeader: FC<{ addClass?: string; onChangeVisibleBurger?: () => void }> = ({
-  addClass,
-  onChangeVisibleBurger,
-}) => {
   return (
-    <nav className={cn(styles.menu, addClass)}>
-      <ul className={styles.items} onClick={onChangeVisibleBurger}>
-        <li className={styles.item}>
-          <HashLink className={styles.navigation} smooth to="/#keys">
-            Кейсы
-          </HashLink>
-        </li>
-        <li className={styles.item}>
-          <a className={styles.navigation} href="/EvgenyShkuratovCV.pdf" target="_blank" rel="noopener">
-            Резюме
-          </a>
-        </li>
-        <li className={styles.item}>
-          <NavLink to={AppRoutes.keys} activeClassName={styles.navigationActive} className={styles.navigation}>
-            Галерея проектов
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <header className={cn(styles.header)}>
+        <div className={`container ${styles.container}`}>
+          <Link className={styles.logo} to={AppRoutes.home}>
+            <img src={logo} alt="Логотип" />
+          </Link>
+          <ul className={styles.items}>
+            <li className={styles.item}>{klondikeLink()}</li>
+            <li className={cn(styles.item, styles.itemMobile)}>{mtrLink()}</li>
+            <li className={styles.item}>{orderDesignLink()}</li>
+            <li className={styles.item}>{keysLink()}</li>
+          </ul>
+          <SocialsLinks />
+          <button className={styles.burger} type="button" onClick={toggleMenu}>
+            <img src={burger} alt="Открыть меню" />
+          </button>
+        </div>
+      </header>
+      <div className={cn(styles.mobileMenu, { [styles.mobileMenuOpen]: isOpenBurger })}>
+        <div className={styles.mobileMenuBg}>
+          <button className={styles.mobileMenuBurger} type="button" onClick={toggleMenu}>
+            <img src={burgerClose} alt="Открыть меню" />
+          </button>
+          <ul className={styles.mobileMenuList}>
+            <li className={styles.mobileMenuItem}>{klondikeLink(true)}</li>
+            <li className={styles.mobileMenuItem}>{mtrLink()}</li>
+            <li className={styles.mobileMenuItem}>{orderDesignLink(true)}</li>
+            <li className={styles.mobileMenuItem}>{keysLink(true)}</li>
+            <li className={styles.mobileMenuItem}>
+              <SocialsLinks isMobile />
+            </li>
+          </ul>
+          <Button className={styles.mobileMenuBtn} block Component="a" href={SocialLink.telegram} target="_blank">
+            Бесплатная консультация
+          </Button>
+        </div>
+      </div>
+    </>
   );
 };
 
-const SocialHeader: FC<{ addClass?: string }> = ({ addClass }) => {
+const SocialsLinks = ({ isMobile = false }: { isMobile?: boolean }) => {
   return (
-    <ul className={cn(styles.socials, addClass)}>
-      {headerData.map((item, index) => (
-        <li className={styles.social} key={index}>
-          <a className={cn(styles.link, 'icon', styles[item.social])} target="_blank" rel="noreferrer" href={item.href}>
-            <img src={`./images/social-icon/${item.social}.svg`} alt={item.social} />
-          </a>
-        </li>
-      ))}
+    <ul className={cn(styles.elements, { [styles.elementsMobile]: isMobile })}>
+      <li className={styles.element}>
+        <a className={styles.social} href={SocialLink.instagram} target="_blank" rel="noreferrer">
+          <img src={instagram} alt="instagram" />
+        </a>
+      </li>
+      <li className={styles.element}>
+        <a className={styles.social} href={SocialLink.linkedin} target="_blank" rel="noreferrer">
+          <img src={linkedin} alt="linkedin" />
+        </a>
+      </li>
     </ul>
   );
 };

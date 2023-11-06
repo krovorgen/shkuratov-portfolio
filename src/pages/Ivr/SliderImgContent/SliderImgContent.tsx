@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Navigation, EffectFade } from 'swiper';
+import { EffectFade, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './SliderImgContent.module.scss';
 import 'swiper/css';

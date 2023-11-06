@@ -1,44 +1,32 @@
-import React, { ButtonHTMLAttributes, DetailedHTMLProps, FC, LinkHTMLAttributes } from 'react';
+/* eslint-disable react/jsx-props-no-spreading */
+import React, { AnchorHTMLAttributes, ButtonHTMLAttributes, ElementType, FC, memo, PropsWithChildren } from 'react';
 import cn from 'classnames';
+
 import styles from './Button.module.scss';
 
-type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
-type DefaultLinkPropsType = DetailedHTMLProps<LinkHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>;
-
-export interface IButtonProps {
-  addClass?: string;
-  href?: string;
-  appearances?: 'accent' | 'primary';
-  variant?: 'span';
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'accent';
+  size?: 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+  className?: string;
+  center?: boolean;
+  block?: boolean;
+  Component?: ElementType;
 }
 
-export const Button: FC<IButtonProps & DefaultButtonPropsType & DefaultLinkPropsType> = ({
-  addClass,
-  href,
-  children,
-  variant,
-  appearances = 'primary',
-  ...props
-}) => {
-  const appearancesVariant = {
-    [styles.primary]: appearances === 'primary',
-    [styles.accent]: appearances === 'accent',
-  };
-
-  if (variant === 'span') {
+interface AnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {}
+export const Button: FC<PropsWithChildren<ButtonProps & AnchorProps>> = memo(
+  ({ className, block, Component = 'button', variant = 'primary', size = 'md', center, children, ...props }) => {
     return (
-      <span className={cn(styles.button, appearancesVariant, addClass)} {...props}>
+      <Component
+        className={cn(styles.btn, styles[size], styles[variant], className, {
+          [styles.center]: center,
+          [styles.block]: block,
+        })}
+        type="button"
+        {...props}
+      >
         {children}
-      </span>
+      </Component>
     );
   }
-  return href ? (
-    <a className={cn(styles.button, appearancesVariant, addClass)} href={href} {...props}>
-      {children}
-    </a>
-  ) : (
-    <button className={cn(styles.button, appearancesVariant, addClass)} {...props}>
-      {children}
-    </button>
-  );
-};
+);
