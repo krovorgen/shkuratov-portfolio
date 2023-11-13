@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { AppRoutes } from './data/routes';
 import { Ivr } from './pages/Ivr';
-import { Mentoring } from './pages/Mentoring/Mentoring';
+import { Mentoring } from './pages/Mentor/Mentoring';
 import { RootLayout } from './Layouts/RootLayout/RootLayout';
 
 const router = createBrowserRouter([

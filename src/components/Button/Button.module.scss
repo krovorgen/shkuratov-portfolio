@@ -9,7 +9,7 @@
   appearance: none;
   border: none;
   text-align: center;
-  transition: 0.3s background-color, 0.3s box-shdow;
+  transition: 0.2s background-color, 0.2s box-shdow;
   cursor: pointer;
 }
 
@@ -42,14 +42,14 @@
   background-color: #262626;
 
   &:hover {
-    border-color: #181818;
-    background-color: #181818;
+    border-color: #0d0d0d;
+    background-color: #0d0d0d;
   }
 
   &:active {
-    border-color: #181818;
+    border-color: #0d0d0d;
     box-shadow: 0 -4px 18px 0 rgba(0, 0, 0, 0.45) inset;
-    background-color: #181818;
+    background-color: #0d0d0d;
   }
 }
 
@@ -72,6 +72,7 @@
   @include media($md) {
     padding: 0 24px;
     min-height: 48px;
+    border-radius: 10px;
     font-size: 14px;
   }
 }

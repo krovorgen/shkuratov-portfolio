@@ -1,0 +1,138 @@
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
+
+.root {
+  @include media($sm) {
+  }
+
+  @include media($xl) {
+    margin-bottom: 56px;
+  }
+}
+
+.container {
+  @include media($sm) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.wrap {
+  position: relative;
+  display: flex;
+  padding-top: 52px;
+  overflow: hidden;
+
+  @include media($xl) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  @include media($sm) {
+    padding-top: 64px;
+  }
+}
+
+.info {
+  position: relative;
+  z-index: 1;
+  margin-top: 52px;
+  width: 100%;
+  max-width: 570px;
+
+  @include media($xl) {
+    margin-top: 0;
+    max-width: 100%;
+  }
+}
+
+.tags {
+  display: flex;
+  margin-bottom: 32px;
+  gap: 16px;
+
+  @include media($sm) {
+    margin-bottom: 16px;
+  }
+}
+
+.tag {
+
+}
+
+.title {
+  margin-bottom: 24px;
+  font-weight: 590;
+  font-size: 56px;
+  line-height: 120%;
+  color: #98989d;
+
+  @include media($xl) {
+    width: 70%;
+  }
+
+  @include media($sm) {
+    margin-bottom: 16px;
+    width: 60%;
+    font-size: 26px;
+  }
+
+  mark {
+    color: #fff;
+  }
+}
+
+.text {
+  margin-bottom: 48px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 1px;
+  color: #98989d;
+
+  @include media($xl) {
+    width: 70%;
+  }
+
+  @include media($sm) {
+    margin-bottom: 32px;
+    width: 60%;
+    font-size: 14px;
+  }
+
+  mark {
+    font-weight: 590;
+    color: #e8fe55;
+  }
+}
+
+.btn {
+  @include media($xl) {
+    width: 100%;
+  }
+}
+
+.img {
+  @include media($xl) {
+    position: absolute;
+    right: 0;
+    bottom: 52px;
+  }
+
+  @include media($sm) {
+    right: -70px;
+  }
+
+  img {
+    display: block;
+    height: auto;
+
+    @include media($xl) {
+      width: 300px;
+    }
+
+    @include media($md) {
+      width: 236px;
+    }
+  }
+}

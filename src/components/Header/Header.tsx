@@ -3,8 +3,8 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import instagram from '../../images/social-icons/instagram.svg';
 import linkedin from '../../images/social-icons/linkedin.svg';
-import burger from '../../images/homePage/Header/burger.svg';
-import burgerClose from '../../images/homePage/Header/burger-close.svg';
+import burger from '../../images/Header/burger.svg';
+import burgerClose from '../../images/close.svg';
 import { Link as AnchorLink } from 'react-scroll';
 
 import cn from 'classnames';
@@ -37,7 +37,7 @@ export const Header: FC<HeaderProps> = () => {
 
   const klondikeLink = (isMobileMenu: boolean = false) =>
     isMainPage ? (
-      <AnchorLink to="klondike" smooth onClick={isMobileMenu ? toggleMenu : undefined}>
+      <AnchorLink to="klondike" duration={350} smooth onClick={isMobileMenu ? toggleMenu : undefined}>
         <LinkUI Component="span">Клондайк дизайнера</LinkUI>
       </AnchorLink>
     ) : (
@@ -48,7 +48,7 @@ export const Header: FC<HeaderProps> = () => {
 
   const orderDesignLink = (isMobileMenu: boolean = false) =>
     isMainPage ? (
-      <AnchorLink to="order-design" smooth onClick={isMobileMenu ? toggleMenu : undefined}>
+      <AnchorLink to="order-design" duration={400} smooth onClick={isMobileMenu ? toggleMenu : undefined}>
         <LinkUI Component="span">Заказать дизайн</LinkUI>
       </AnchorLink>
     ) : (
@@ -59,7 +59,7 @@ export const Header: FC<HeaderProps> = () => {
 
   const keysLink = (isMobileMenu: boolean = false) =>
     isMainPage ? (
-      <AnchorLink to="keys" smooth onClick={isMobileMenu ? toggleMenu : undefined}>
+      <AnchorLink to="keys" duration={450} smooth onClick={isMobileMenu ? toggleMenu : undefined}>
         <LinkUI Component="span">Портфолио</LinkUI>
       </AnchorLink>
     ) : (

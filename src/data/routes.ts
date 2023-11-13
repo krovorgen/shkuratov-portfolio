@@ -4,5 +4,5 @@ export enum AppRoutes {
   dinamo = '/dinamo',
   itec = '/itec',
   ivr = '/ivr',
-  mtr = '/mtr',
+  mtr = '/mentor',
 }
