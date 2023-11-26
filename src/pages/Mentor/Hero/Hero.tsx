@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 
-import styles from './Hero.module.scss';
+import cn from 'classnames';
 import { Label } from '../../Home/Label/Label';
 import { Button } from '../../../components/Button/Button';
 import { SocialLink } from '../../../data/socialLink';
 import evgen from '../../../images/mentorPage/Hero/evgen.png';
-import cn from 'classnames';
+import styles from './Hero.module.scss';
 
 type Props = {};
 

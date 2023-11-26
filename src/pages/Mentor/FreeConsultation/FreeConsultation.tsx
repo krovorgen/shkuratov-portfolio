@@ -15,7 +15,11 @@ export const FreeConsultation: FC<Props> = () => {
           <Label className={styles.label} center iconColor="green">
             Путь в 1000 миль начинается с первого шага
           </Label>
-          <h2 className={styles.title}>Записывайтесь на бесплатную консультацию </h2>
+          <h2 className={styles.title}>
+            Записывайтесь <br />
+            на бесплатную <br />
+            консультацию
+          </h2>
           <p className={styles.text}>
             Это <mark>ни&nbsp;к&nbsp;чему не&nbsp;обязывает</mark>. Созвонимся, разберём вашу текущую ситуацию. Обсудим
             ваши цели и&nbsp;что делать дальше. Выясним, чем я&nbsp;могу вам помочь и&nbsp;

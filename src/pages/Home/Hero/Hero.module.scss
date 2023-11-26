@@ -36,12 +36,19 @@
   font-weight: 590;
   font-size: 56px;
   line-height: 120%;
+  letter-spacing: -0.7px;
   color: #fff;
 
   @include media($sm) {
     margin-bottom: 24px;
     font-size: 26px;
     text-align: center;
+  }
+
+  br {
+    @include min-media($sm) {
+      display: none;
+    }
   }
 
   mark {
@@ -129,6 +136,9 @@
 
 .icon {
   position: absolute;
+  animation-name: hovering;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
 
   @include media($lg) {
     display: none;
@@ -158,5 +168,19 @@
 .btn {
   @include media($sm) {
     width: 100%;
+  }
+}
+
+@keyframes hovering {
+  from {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(15px);
+  }
+
+  to {
+    transform: translateY(0);
   }
 }

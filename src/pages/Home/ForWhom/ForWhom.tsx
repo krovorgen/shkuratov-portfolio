@@ -19,7 +19,7 @@ export const ForWhom: FC<Props> = () => {
               Для дизайнеров
             </Label>
             <h2 className={styles.title}>Менторство</h2>
-            <p className={styles.text}>Помогу найти первую работу или&nbsp;получить повышение</p>
+            <p className={styles.text}>Помогу найти первую работу или&nbsp;получить&nbsp;повышение</p>
             <div className={styles.nav}>
               <Button className={styles.btn} Component="a" href={SocialLink.telegram} target="_blank">
                 Бесплатная консультация
@@ -31,7 +31,8 @@ export const ForWhom: FC<Props> = () => {
               </Link>
             </div>
           </li>
-          <li className={styles.item} id="order-design">
+          <li className={styles.item}>
+            <span id="order-design" style={{ position: 'relative', top: '-150px' }} />
             <Label className={styles.label} iconColor="red" center>
               Для предпринимателей
             </Label>

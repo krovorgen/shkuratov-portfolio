@@ -2,10 +2,10 @@
 @import "/src/scss/helpers/mixins";
 
 .root {
-  margin-bottom: 240px;
+  padding-bottom: 240px;
 
   @include media($sm) {
-    margin-bottom: 102px;
+    padding-bottom: 102px;
   }
 }
 
@@ -28,12 +28,19 @@
   font-weight: 700;
   font-size: 44px;
   line-height: 120%;
+  letter-spacing: -0.7px;
   text-align: center;
   color: #fff;
 
   @include media($sm) {
     margin-bottom: 16px;
     font-size: 26px;
+  }
+
+  br {
+    @include min-media($sm) {
+      display: none;
+    }
   }
 }
 
@@ -53,7 +60,7 @@
   }
 
   mark {
-    font-weight: 590;
+    font-weight: 500;
     color: #fff;
   }
 }

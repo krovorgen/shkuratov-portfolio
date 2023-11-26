@@ -24,6 +24,7 @@
   font-weight: 590;
   font-size: 44px;
   line-height: 130%;
+  letter-spacing: -0.7px;
   text-align: center;
   color: #fff;
 
@@ -93,6 +94,7 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 32px;
+  letter-spacing: 1px;
 
   &Primary {
     color: #d23c55;
@@ -125,37 +127,12 @@
     }
 
     &.max400 {
-      max-width: 400px;
+      max-width: 401px;
 
       @include media($lg) {
         max-width: 100%;
       }
     }
-  }
-}
-
-.icon {
-  position: absolute;
-  top: -24px;
-
-  @include min-media($sm) {
-    display: none;
-  }
-
-  &1 {
-    right: 16px;
-  }
-
-  &2 {
-    right: 42px;
-  }
-
-  &3 {
-    right: 16px;
-  }
-
-  &4 {
-    right: 28px;
   }
 }
 

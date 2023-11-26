@@ -1,15 +1,9 @@
 @import "/src/scss/helpers/vars";
 @import "/src/scss/helpers/mixins";
 
-:global {
-  main {
-    background-image: url("../../images/homePage/bg-top.png"), url("../../images/homePage/bg-middle.png");
-    background-position: top center, top 1416px center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-}
-
-.fake {
-  position: static;
+.mainPage {
+  background-image: url("../../images/homePage/bg-top.png"), url("../../images/homePage/bg-middle.png");
+  background-position: top center, top 1416px center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

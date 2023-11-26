@@ -4,10 +4,6 @@ import styles from './Steps.module.scss';
 import { Label } from '../Label/Label';
 import cn from 'classnames';
 import { Button } from '../../../components/Button/Button';
-import icon1 from '../../../images/Steps/icon-1.png';
-import icon2 from '../../../images/Steps/icon-2.png';
-import icon3 from '../../../images/Steps/icon-3.png';
-import icon4 from '../../../images/Steps/icon-4.png';
 import { SocialLink } from '../../../data/socialLink';
 
 type Props = {};
@@ -35,7 +31,6 @@ export const Steps: FC<Props> = () => {
               </div>
             </li>
             <li className={styles.item}>
-              <img className={cn(styles.icon, styles.icon1)} src={icon1} alt="" />
               <p className={cn(styles.year, styles.yearPrimary)}>2018</p>
               <div className={styles.text}>
                 <p>
@@ -47,7 +42,6 @@ export const Steps: FC<Props> = () => {
               </div>
             </li>
             <li className={styles.item}>
-              <img className={cn(styles.icon, styles.icon2)} src={icon2} alt="" />
               <p className={cn(styles.year, styles.yearPrimary)}>2019</p>
               <div className={styles.text}>
                 <p className={styles.max400}>
@@ -61,7 +55,6 @@ export const Steps: FC<Props> = () => {
               </div>
             </li>
             <li className={styles.item}>
-              <img className={cn(styles.icon, styles.icon3)} src={icon3} alt="" />
               <p className={cn(styles.year, styles.yearAccent)}>2020</p>
               <div className={styles.text}>
                 <p className={styles.max400}>
@@ -78,7 +71,6 @@ export const Steps: FC<Props> = () => {
               </div>
             </li>
             <li className={styles.item}>
-              <img className={cn(styles.icon, styles.icon4)} src={icon4} alt="" />
               <p className={cn(styles.year, styles.yearAccent)}>2023</p>
               <div className={styles.text}>
                 <p>

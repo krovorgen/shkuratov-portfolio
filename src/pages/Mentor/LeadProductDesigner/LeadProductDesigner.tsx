@@ -15,7 +15,7 @@ export const LeadProductDesigner: FC<Props> = () => {
             <Label className={styles.label} iconColor="green">
               Почему вы можете доверять моей экспертизе
             </Label>
-            <h2 className={styles.title}>Lead product designer с 7 летним опытом</h2>
+            <h2 className={styles.title}>Lead product designer с&nbsp;7&nbsp;летним опытом</h2>
             <div className={styles.text}>
               <p>
                 В&nbsp;данный момент <mark>отвечаю за&nbsp;дизайн-направление в&nbsp;крупном it-продукте</mark>{' '}

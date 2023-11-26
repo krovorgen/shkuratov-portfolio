@@ -16,7 +16,8 @@ export const Klondike: FC<Props> = () => {
   };
   return (
     <>
-      <section className={styles.root} id="klondike">
+      <span id="klondike" style={{ position: 'relative', top: '-150px' }} />
+      <section className={styles.root}>
         <div className="container">
           <div className={styles.wrap}>
             <Label className={styles.label} iconColor="red" center>
@@ -61,7 +62,7 @@ export const Klondike: FC<Props> = () => {
                     <p className={styles.text}>UX-фреймворки</p>
                   </li>
                   <li className={styles.element}>
-                    <p className={styles.text}>Дизайн системы</p>
+                    <p className={styles.text}>Дизайн-системы</p>
                   </li>
                 </ul>
               </li>

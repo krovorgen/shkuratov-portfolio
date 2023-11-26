@@ -7,6 +7,7 @@ import styles from './Home.module.scss';
 import { Klondike } from './Klondike/Klondike';
 import { ForWhom } from './ForWhom/ForWhom';
 import { useLocation } from 'react-router-dom';
+import { useClassNameWrap } from '../../Layouts/RootLayout/RootLayout';
 
 export const Home = () => {
   const location = useLocation();
@@ -24,6 +25,13 @@ export const Home = () => {
       }, 100);
     }
   }, [location]);
+
+  const { setMainClassName } = useClassNameWrap();
+
+  useEffect(() => {
+    setMainClassName(styles.mainPage);
+    return () => setMainClassName('');
+  }, []);
   return (
     <div className={styles.fake}>
       <Hero />

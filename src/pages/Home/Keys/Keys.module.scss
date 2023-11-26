@@ -19,6 +19,7 @@
   font-weight: 600;
   font-size: 56px;
   line-height: 120%;
+  letter-spacing: -0.7px;
   text-align: center;
   color: #fff;
 
@@ -68,6 +69,10 @@
     @include media($md) {
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    @include media($sm) {
+      gap: 12px;
     }
   }
 

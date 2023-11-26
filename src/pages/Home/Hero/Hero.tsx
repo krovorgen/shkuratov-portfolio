@@ -22,7 +22,8 @@ export const Hero: FC<Props> = () => {
               12 млн человек пользуются моим дизайном
             </Label>
             <h1 className={styles.title}>
-              <mark>Lead Product Designer</mark> Помогаю расти дизайнерам и бизнесу
+              <mark>Lead Product Designer</mark> Помогаю расти <br />
+              дизайнерам и бизнесу
             </h1>
             <div className={styles.wrap}>
               <img className={cn(styles.icon, styles.icon1)} src={icon1} alt="figma" />
