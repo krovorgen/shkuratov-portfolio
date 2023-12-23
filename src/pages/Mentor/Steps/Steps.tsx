@@ -18,7 +18,7 @@ export const Steps: FC<Props> = () => {
         <ul className={styles.items}>
           <li className={styles.item}>
             <div className={styles.img}>
-              <img src={img1} width={600} height={400} alt="" />
+              <img src={img1} width={600} height={400} alt="" loading="lazy" />
             </div>
             <div className={cn(styles.info, styles.infoRightPadding)}>
               <h2 className={styles.title}>
@@ -42,7 +42,7 @@ export const Steps: FC<Props> = () => {
           </li>
           <li className={styles.item}>
             <div className={styles.img}>
-              <img src={img2} width={600} height={276} alt="" />
+              <img src={img2} width={600} height={276} alt="" loading="lazy" />
             </div>
             <div className={cn(styles.info, styles.infoLeftPadding)}>
               <h2 className={styles.title}>
@@ -58,7 +58,7 @@ export const Steps: FC<Props> = () => {
           </li>
           <li className={styles.item}>
             <div className={styles.img}>
-              <img src={img3} width={600} height={400} alt="" />
+              <img src={img3} width={600} height={400} alt="" loading="lazy" />
             </div>
             <div className={styles.info} style={{ maxWidth: '431px' }}>
               <h2 className={styles.title}>

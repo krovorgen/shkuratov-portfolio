@@ -38,7 +38,7 @@ export const LeadProductDesigner: FC<Props> = () => {
             </div>
           </div>
           <div className={styles.img}>
-            <img src={bg} width={571} height={678} alt="Великолепный Евгений Шкуратов" />
+            <img src={bg} width={571} height={678} alt="Великолепный Евгений Шкуратов" loading="lazy" />
           </div>
         </div>
       </div>

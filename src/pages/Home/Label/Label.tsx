@@ -27,7 +27,7 @@ export const Label: FC<PropsWithChildren<Props>> = ({ iconColor, children, cente
 
   return (
     <div className={cn(styles.root, className, { [styles.center]: center })}>
-      <img src={getIcon()} alt="Звёздочка" />
+      <img loading="lazy" src={getIcon()} alt="Звёздочка" />
       {children}
     </div>
   );

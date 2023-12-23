@@ -20,7 +20,7 @@ export const Keys: FC<Props> = () => {
         <div className={styles.inner}>
           <div className={styles.box}>
             <div className={styles.img}>
-              <img src={keys1} alt="keys1" />
+              <img src={keys1} alt="keys1" loading="lazy" />
             </div>
             <div className={styles.body}>
               <h3 className={styles.subtitle}>
@@ -32,7 +32,7 @@ export const Keys: FC<Props> = () => {
           <div className={styles.wrap}>
             <div className={styles.box}>
               <div className={styles.img}>
-                <img src={keys2} alt="keys2" />
+                <img src={keys2} alt="keys2" loading="lazy" />
               </div>
               <div className={styles.body}>
                 <h3 className={styles.subtitle}>
@@ -43,7 +43,7 @@ export const Keys: FC<Props> = () => {
             </div>
             <div className={styles.box}>
               <div className={styles.img}>
-                <img src={keys3} alt="keys3" />
+                <img src={keys3} alt="keys3" loading="lazy" />
               </div>
               <div className={styles.body}>
                 <h3 className={styles.subtitle}>
@@ -55,7 +55,7 @@ export const Keys: FC<Props> = () => {
           </div>
           <div className={styles.box}>
             <div className={styles.img}>
-              <img src={keys4} alt="keys4" />
+              <img src={keys4} alt="keys4" loading="lazy" />
             </div>
             <div className={styles.body}>
               <h3 className={styles.subtitle}>
