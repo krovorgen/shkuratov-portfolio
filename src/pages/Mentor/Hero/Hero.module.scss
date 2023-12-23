@@ -9,9 +9,9 @@
 
 .container {
   @include media($xl) {
-
     overflow: hidden;
   }
+
   @include media($sm) {
     padding-right: 0;
     padding-left: 0;
@@ -204,7 +204,7 @@
     path {
       stroke-dasharray: 232;
       stroke-dashoffset: 232;
-      animation: topLineAnimation 50s forwards infinite 2.9s;
+      animation: topLineAnimation 150s forwards infinite 2.9s;
     }
 
     @keyframes topLineAnimation {
@@ -212,7 +212,7 @@
         stroke-dashoffset: 232;
       }
 
-      3% {
+      1% {
         stroke-dashoffset: 0;
       }
 
@@ -229,7 +229,7 @@
     path {
       stroke-dasharray: 900;
       stroke-dashoffset: 900;
-      animation: middleLineAnimation 50s infinite 1.6s;
+      animation: middleLineAnimation 150s infinite 1.6s;
     }
 
     @keyframes middleLineAnimation {
@@ -237,7 +237,7 @@
         stroke-dashoffset: 900;
       }
 
-      3% {
+      1% {
         stroke-dashoffset: 0;
       }
 
@@ -254,8 +254,7 @@
     path {
       stroke-dasharray: 765;
       stroke-dashoffset: 765;
-      animation: bottomLineAnimation 50s infinite;
-      animation-iteration-count: 1;
+      animation: bottomLineAnimation 150s infinite;
     }
 
     @keyframes bottomLineAnimation {
@@ -263,7 +262,7 @@
         stroke-dashoffset: 765;
       }
 
-      3% {
+      1% {
         stroke-dashoffset: 0;
       }
 
