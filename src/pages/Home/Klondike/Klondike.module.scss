@@ -95,7 +95,6 @@
   font-weight: 400;
   font-size: 17px;
   line-height: 140%;
-  letter-spacing: 1px;
   color: #fff;
   background-image: url("../../../images/stars/black.svg");
   background-position: left center;
@@ -114,5 +113,14 @@
 .btn {
   @include media($sm) {
     width: 100%;
+  }
+}
+
+.anchor {
+  position: relative;
+  top: -150px;
+
+  @include media($sm) {
+    top: -80px;
   }
 }

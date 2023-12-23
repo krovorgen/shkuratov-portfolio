@@ -6,8 +6,6 @@ import keys1 from '../../../images/Keys/1.png';
 import keys2 from '../../../images/Keys/2.png';
 import keys3 from '../../../images/Keys/3.png';
 import keys4 from '../../../images/Keys/4.png';
-import { Link } from 'react-router-dom';
-import { AppRoutes } from '../../../data/routes';
 
 type Props = {};
 
@@ -24,7 +22,6 @@ export const Keys: FC<Props> = () => {
             <div className={styles.img}>
               <img src={keys1} alt="keys1" />
             </div>
-            <Link to={AppRoutes.ivr} className={styles.ghostLink} />
             <div className={styles.body}>
               <h3 className={styles.subtitle}>
                 IVR. Сервис <mark>автоматических обзвонов</mark>

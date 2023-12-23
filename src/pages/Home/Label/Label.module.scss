@@ -10,7 +10,6 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 140%;
-  letter-spacing: 1px;
   text-align: center;
   color: #98989d;
   gap: 8px;
@@ -18,10 +17,6 @@
   @include media($sm) {
     padding: 6px 8px;
     font-size: 14px;
-  }
-
-  @include media($xs) {
-    letter-spacing: 0.5px;
   }
 }
 

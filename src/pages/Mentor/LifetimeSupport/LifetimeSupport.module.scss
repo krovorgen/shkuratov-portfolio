@@ -30,7 +30,7 @@
 
 .title {
   margin: 0 auto 40px;
-  max-width: 630px;
+  max-width: 660px;
   font-weight: 700;
   font-size: 44px;
   line-height: 120%;
@@ -51,9 +51,9 @@
 .items {
   display: flex;
   justify-content: center;
-  margin: 0 auto 40px;
+  margin: 0 auto 50px;
   max-width: 950px;
-  gap: 16px;
+  gap: 72px;
 
   @include media($md) {
     gap: 16px;
@@ -87,7 +87,6 @@
   font-weight: 400;
   font-size: 17px;
   line-height: 140%;
-  letter-spacing: 1px;
   color: #fff;
   background-image: url("../../../images/stars/black.svg");
   background-position: left center;

@@ -16,7 +16,7 @@ export const Klondike: FC<Props> = () => {
   };
   return (
     <>
-      <span id="klondike" style={{ position: 'relative', top: '-150px' }} />
+      <span id="klondike" className={styles.anchor} />
       <section className={styles.root}>
         <div className="container">
           <div className={styles.wrap}>

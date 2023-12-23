@@ -68,8 +68,12 @@ export const Header: FC<HeaderProps> = () => {
       </Link>
     );
 
-  const mtrLink = () => (
-    <NavLink className={({ isActive }) => (isActive ? styles.activeLink : '')} to={AppRoutes.mtr}>
+  const mtrLink = (isMobileMenu: boolean = false) => (
+    <NavLink
+      className={({ isActive }) => (isActive ? styles.activeLink : '')}
+      to={AppRoutes.mtr}
+      onClick={isMobileMenu ? toggleMenu : undefined}
+    >
       <LinkUI Component="span">Менторство</LinkUI>
     </NavLink>
   );
@@ -100,7 +104,7 @@ export const Header: FC<HeaderProps> = () => {
           </button>
           <ul className={styles.mobileMenuList}>
             <li className={styles.mobileMenuItem}>{klondikeLink(true)}</li>
-            <li className={styles.mobileMenuItem}>{mtrLink()}</li>
+            <li className={styles.mobileMenuItem}>{mtrLink(true)}</li>
             <li className={styles.mobileMenuItem}>{orderDesignLink(true)}</li>
             <li className={styles.mobileMenuItem}>{keysLink(true)}</li>
             <li className={styles.mobileMenuItem}>

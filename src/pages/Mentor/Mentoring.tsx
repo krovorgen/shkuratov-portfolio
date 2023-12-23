@@ -17,7 +17,7 @@ export const Mentoring: FC<Props> = () => {
   useEffect(() => {
     setMainClassName(styles.mentoringPage);
     return () => setMainClassName('');
-  }, []);
+  }, [setMainClassName]);
   return (
     <>
       <Hero />

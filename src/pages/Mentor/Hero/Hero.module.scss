@@ -2,15 +2,16 @@
 @import "/src/scss/helpers/mixins";
 
 .root {
-  @include media($sm) {
-  }
-
   @include media($xl) {
     margin-bottom: 56px;
   }
 }
 
 .container {
+  @include media($xl) {
+
+    overflow: hidden;
+  }
   @include media($sm) {
     padding-right: 0;
     padding-left: 0;
@@ -21,7 +22,7 @@
   position: relative;
   display: flex;
   padding-top: 52px;
-  overflow: hidden;
+  gap: 36px;
 
   @include media($xl) {
     padding-right: 10px;
@@ -62,7 +63,7 @@
 
 .title {
   margin-bottom: 24px;
-  font-weight: 590;
+  font-weight: 600;
   font-size: 56px;
   line-height: 120%;
   color: #98989d;
@@ -73,7 +74,8 @@
 
   @include media($sm) {
     margin-bottom: 16px;
-    width: 60%;
+    width: 100%;
+    max-width: 200px;
     font-size: 26px;
   }
 
@@ -84,10 +86,10 @@
 
 .text {
   margin-bottom: 48px;
+  max-width: 325px;
   font-weight: 400;
   font-size: 17px;
   line-height: 140%;
-  letter-spacing: 1px;
   color: #98989d;
 
   @include media($xl) {
@@ -96,12 +98,13 @@
 
   @include media($sm) {
     margin-bottom: 32px;
-    width: 60%;
+    width: 100%;
+    max-width: 165px;
     font-size: 14px;
   }
 
   mark {
-    font-weight: 590;
+    font-weight: 600;
     color: #e8fe55;
   }
 }
@@ -113,26 +116,160 @@
 }
 
 .img {
+  position: relative;
+
   @include media($xl) {
     position: absolute;
-    right: 0;
-    bottom: 52px;
+    right: -240px;
+    bottom: -103px;
+    transform: scale(0.5);
   }
 
   @include media($sm) {
-    right: -70px;
+    right: -251px;
+    bottom: -136px;
+    transform: scale(0.4);
+  }
+}
+
+.evgen {
+}
+
+.icon {
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  animation-name: fadeInIcon, hovering;
+  animation-duration: 1s, 3.5s;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards, forwards;
+
+  &1 {
+    left: 74px;
+    top: 139px;
+    animation-delay: 3s, 1s;
   }
 
-  img {
-    display: block;
-    height: auto;
+  &2 {
+    right: 10px;
+    top: 223px;
+    animation-delay: 1.7s, 0.5s;
+  }
 
-    @include media($xl) {
-      width: 300px;
+  &3 {
+    right: 68px;
+    bottom: 79px;
+    animation-delay: 0s, 1.1s;
+  }
+
+  &4 {
+    left: -29px;
+    bottom: 79px;
+    animation-delay: 0.7s, 0s;
+  }
+}
+
+@keyframes fadeInIcon {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hovering {
+  from {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(15px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.line {
+  position: absolute;
+  z-index: 5;
+
+  &Top {
+    left: 43px;
+    top: 90px;
+
+    path {
+      stroke-dasharray: 232;
+      stroke-dashoffset: 232;
+      animation: topLineAnimation 50s forwards infinite 2.9s;
     }
 
-    @include media($md) {
-      width: 236px;
+    @keyframes topLineAnimation {
+      0% {
+        stroke-dashoffset: 232;
+      }
+
+      3% {
+        stroke-dashoffset: 0;
+      }
+
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+
+  &Middle {
+    left: 9px;
+    top: 188px;
+
+    path {
+      stroke-dasharray: 900;
+      stroke-dashoffset: 900;
+      animation: middleLineAnimation 50s infinite 1.6s;
+    }
+
+    @keyframes middleLineAnimation {
+      0% {
+        stroke-dashoffset: 900;
+      }
+
+      3% {
+        stroke-dashoffset: 0;
+      }
+
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+
+  &Bottom {
+    left: -22px;
+    bottom: 13px;
+
+    path {
+      stroke-dasharray: 765;
+      stroke-dashoffset: 765;
+      animation: bottomLineAnimation 50s infinite;
+      animation-iteration-count: 1;
+    }
+
+    @keyframes bottomLineAnimation {
+      0% {
+        stroke-dashoffset: 765;
+      }
+
+      3% {
+        stroke-dashoffset: 0;
+      }
+
+      100% {
+        stroke-dashoffset: 0;
+      }
     }
   }
 }

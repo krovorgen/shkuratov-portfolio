@@ -31,7 +31,7 @@ export const Home = () => {
   useEffect(() => {
     setMainClassName(styles.mainPage);
     return () => setMainClassName('');
-  }, []);
+  }, [setMainClassName]);
   return (
     <div className={styles.fake}>
       <Hero />

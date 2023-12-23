@@ -24,7 +24,6 @@
   font-weight: 590;
   font-size: 44px;
   line-height: 130%;
-  letter-spacing: -0.7px;
   text-align: center;
   color: #fff;
 
@@ -94,7 +93,6 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 32px;
-  letter-spacing: 1px;
 
   &Primary {
     color: #d23c55;
@@ -110,7 +108,6 @@
     font-weight: 400;
     font-size: 17px;
     line-height: 140%;
-    letter-spacing: 1px;
     color: #98989d;
 
     @include media($sm) {
