@@ -104,5 +104,6 @@
 .btn {
   @include media($sm) {
     width: 100%;
+    font-size: 14px;
   }
 }

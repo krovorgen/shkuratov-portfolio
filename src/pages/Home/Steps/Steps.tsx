@@ -78,7 +78,7 @@ export const Steps: FC<Props> = () => {
                 </p>
                 <p className={styles.max400}>
                   Сейчас я&nbsp;регулярно оттачиваю свои навыки и&nbsp;
-                  <mark>делюсь опытом с&nbsp;другими дизайнерами</mark>
+                  <mark>делюсь опытом и экспертизой с&nbsp;другими дизайнерами</mark>
                 </p>
               </div>
             </li>

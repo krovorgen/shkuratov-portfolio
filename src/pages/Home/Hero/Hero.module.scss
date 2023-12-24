@@ -89,11 +89,11 @@
   }
 
   &::before {
-    left: -42px;
+    left: -36px;
     background-image: url("../../../images/homePage/Hero/decor-left.svg");
 
     @include media($sm) {
-      left: -21px;
+      left: -24px;
     }
   }
 
@@ -101,24 +101,24 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -8px;
-    width: 66px;
-    height: 172px;
+    bottom: 8px;
+    width: 49px;
+    height: 151px;
     background-repeat: no-repeat;
 
     @include media($sm) {
       width: 44px;
       height: 102px;
-      background-size: cover;
+      background-size: contain;
     }
   }
 
   &::after {
-    right: -42px;
+    right: -34px;
     background-image: url("../../../images/homePage/Hero/decor-right.svg");
 
     @include media($sm) {
-      right: -21px;
+      right: -36px;
     }
   }
 
