@@ -122,6 +122,13 @@
     }
   }
 
+  p {
+    @include media($sm) {
+      margin: 0 auto;
+      max-width: 248px;
+    }
+  }
+
   mark {
     font-weight: 590;
     color: #e8fe55;

@@ -26,14 +26,14 @@ export const Hero: FC<Props> = () => {
               дизайнерам и бизнесу
             </h1>
             <div className={styles.wrap}>
-              <div className={styles.content}>
-                <img className={cn(styles.icon, styles.icon1)} src={icon1} alt="figma" />
-                <img className={cn(styles.icon, styles.icon2)} src={icon2} alt="yandex" />
-                <img className={cn(styles.icon, styles.icon3)} src={icon3} alt="zoom" />
-                <img className={cn(styles.icon, styles.icon4)} src={icon4} alt="miro" />
+              <img className={cn(styles.icon, styles.icon1)} src={icon1} alt="figma" />
+              <img className={cn(styles.icon, styles.icon2)} src={icon2} alt="yandex" />
+              <img className={cn(styles.icon, styles.icon3)} src={icon3} alt="zoom" />
+              <img className={cn(styles.icon, styles.icon4)} src={icon4} alt="miro" />
+              <p>
                 Управляю <span>дизайн-командой</span> в&nbsp;EdTech продукте{' '}
                 <mark>&#8470;1&nbsp;по&nbsp;популярности</mark>
-              </div>
+              </p>
             </div>
             <Button className={styles.btn} Component="a" href={SocialLink.telegram} target="_blank">
               Бесплатная консультация
