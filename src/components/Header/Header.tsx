@@ -46,16 +46,7 @@ export const Header: FC<HeaderProps> = () => {
       </Link>
     );
 
-  const orderDesignLink = (isMobileMenu: boolean = false) =>
-    isMainPage ? (
-      <AnchorLink to="order-design" duration={400} smooth onClick={isMobileMenu ? toggleMenu : undefined}>
-        <LinkUI Component="span">Заказать дизайн</LinkUI>
-      </AnchorLink>
-    ) : (
-      <Link to="/#order-design" onClick={isMobileMenu ? toggleMenu : undefined}>
-        <LinkUI Component="span">Заказать дизайн</LinkUI>
-      </Link>
-    );
+  const orderDesignLink = () => <LinkUI href={SocialLink.telegram}>Заказать дизайн</LinkUI>;
 
   const keysLink = (isMobileMenu: boolean = false) =>
     isMainPage ? (
@@ -105,7 +96,7 @@ export const Header: FC<HeaderProps> = () => {
           <ul className={styles.mobileMenuList}>
             <li className={styles.mobileMenuItem}>{klondikeLink(true)}</li>
             <li className={styles.mobileMenuItem}>{mtrLink(true)}</li>
-            <li className={styles.mobileMenuItem}>{orderDesignLink(true)}</li>
+            <li className={styles.mobileMenuItem}>{orderDesignLink()}</li>
             <li className={styles.mobileMenuItem}>{keysLink(true)}</li>
             <li className={styles.mobileMenuItem}>
               <SocialsLinks isMobile />
