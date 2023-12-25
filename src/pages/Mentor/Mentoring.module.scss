@@ -1,0 +1,9 @@
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
+
+.mentoringPage {
+  background-image: url("../../images/homePage/bg-top.png"), url("../../images/homePage/bg-middle.png"), url("../../images/Steps/bg-section.png");
+  background-position: top center, top 1000px center, bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

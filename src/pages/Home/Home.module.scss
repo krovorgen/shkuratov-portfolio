@@ -1,2 +1,9 @@
-@import "./src/scss/vars";
-@import "./src/scss/mixins";
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
+
+.mainPage {
+  background-image: url("../../images/homePage/bg-top.png"), url("../../images/homePage/bg-middle.png");
+  background-position: top center, top 1416px center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

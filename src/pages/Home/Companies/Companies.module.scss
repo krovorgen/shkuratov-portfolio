@@ -1,0 +1,72 @@
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
+
+.root {
+  margin-bottom: 136px;
+
+  @include media($sm) {
+    margin-bottom: 80px;
+  }
+}
+
+.title {
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  text-align: center;
+  color: #98989d;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+
+  mark {
+    color: #fff;
+  }
+}
+
+.elements {
+  margin: 0 auto;
+  max-width: 1120px;
+
+  @include media($sm) {
+    overflow-x: scroll;
+  }
+}
+
+.element {
+  &:not(:last-child) {
+    margin-bottom: 48px;
+
+    @include media($sm) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.item {
+  width: 179px;
+
+  @include media($sm) {
+    width: 86px;
+    min-width: 86px;
+  }
+}
+
+.img {
+  img {
+    display: block;
+    opacity: 0.7;
+    height: auto;
+    mix-blend-mode: luminosity;
+  }
+}

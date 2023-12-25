@@ -1,0 +1,81 @@
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
+
+.root {
+  margin-bottom: 128px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+
+  @include media($lg) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.info {
+  max-width: 565px;
+}
+
+.label {
+  margin-bottom: 24px;
+
+  @include media($sm) {
+    margin-bottom: 16px;
+  }
+}
+
+.title {
+  margin-bottom: 24px;
+  font-weight: 590;
+  font-size: 44px;
+  line-height: 120%;
+  color: #fff;
+
+  @include media($sm) {
+    margin-bottom: 16px;
+    font-size: 26px;
+  }
+}
+
+.text {
+  max-width: 462px;
+
+  p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 140%;
+    color: #fff;
+
+    @include media($sm) {
+      font-size: 14px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @include media($sm) {
+        margin-bottom: 12px;
+      }
+    }
+
+    mark {
+      font-weight: 510;
+      color: #e8fe55;
+    }
+  }
+}
+
+.img {
+  img {
+    display: block;
+    height: auto;
+  }
+}

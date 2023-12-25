@@ -1,0 +1,70 @@
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
+
+.root {
+  padding-bottom: 240px;
+
+  @include media($sm) {
+    padding-bottom: 102px;
+  }
+}
+
+.wrap {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 690px;
+}
+
+.label {
+  margin-bottom: 32px;
+
+  @include media($sm) {
+    margin-bottom: 16px;
+  }
+}
+
+.title {
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 120%;
+  text-align: center;
+  color: #fff;
+
+  @include media($sm) {
+    margin-bottom: 16px;
+    font-size: 26px;
+  }
+
+  br {
+    @include min-media($sm) {
+      display: none;
+    }
+  }
+}
+
+.text {
+  margin: 0 auto 56px;
+  max-width: 580px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  text-align: center;
+  color: #98989d;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+
+  mark {
+    font-weight: 500;
+    color: #fff;
+  }
+}
+
+.btn {
+  @include media($sm) {
+    width: 100%;
+  }
+}

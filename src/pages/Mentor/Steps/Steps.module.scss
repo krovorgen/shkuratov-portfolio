@@ -1,0 +1,140 @@
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
+
+.root {
+  margin-bottom: 128px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.items {
+
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+
+  @include media($lg) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @include media($sm) {
+    gap: 24px;
+  }
+
+  &:nth-child(even) {
+    @include min-media($lg) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 120px;
+
+    @include media($sm) {
+      margin-bottom: 56px;
+    }
+  }
+}
+
+.img {
+  img {
+    display: block;
+    height: auto;
+  }
+}
+
+.info {
+  max-width: 570px;
+
+  &LeftPadding {
+    padding-left: 80px;
+
+    @include media($lg) {
+      padding-left: 0;
+    }
+  }
+
+  &RightPadding {
+    padding-right: 76px;
+
+    @include media($lg) {
+      padding-right: 0;
+    }
+  }
+}
+
+.title {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  color: #98989d;
+
+  @include media($sm) {
+    margin-bottom: 16px;
+    font-size: 26px;
+  }
+
+  mark {
+    color: #fff;
+  }
+}
+
+.text {
+  &Width {
+    &447 {
+      max-width: 447px;
+    }
+
+    &420 {
+      max-width: 420px;
+    }
+
+    &431 {
+      max-width: 431px;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 140%;
+    color: #98989d;
+
+    @include media($sm) {
+      font-size: 14px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @include media($sm) {
+        margin-bottom: 12px;
+      }
+    }
+
+    mark {
+      font-weight: 590;
+      color: #fff;
+    }
+
+    span {
+      white-space: nowrap;
+    }
+  }
+}
+
+.btn {
+  margin-top: 32px;
+
+  @include media($sm) {
+    margin-top: 24px;
+    width: 100%;
+  }
+}

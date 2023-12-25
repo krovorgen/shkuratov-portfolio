@@ -13,8 +13,8 @@ type PictureWithDescrProps = {
 
 export const PictureWithDescr: FC<PictureWithDescrProps> = ({ addClass, pathImg, description }) => {
   return (
-    <>
-      <div className={cn(styles.wrap, addClass)}>
+    <div className={cn(addClass)}>
+      <div className={cn(styles.wrap)}>
         <img src={`./images/${pathImg}`} alt="Картинка" />
       </div>
       {description ? (
@@ -22,6 +22,6 @@ export const PictureWithDescr: FC<PictureWithDescrProps> = ({ addClass, pathImg,
           {description}
         </Paragraph>
       ) : null}
-    </>
+    </div>
   );
 };

@@ -1,0 +1,69 @@
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
+
+.box {
+  background-image: url("../../../images/homePage/AccessToCollection/bg.png");
+  background-position: center right;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  @include media($sm) {
+    background-image: none;
+  }
+}
+
+.title {
+  margin-bottom: 24px;
+  max-width: 378px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  color: #fff;
+
+  @include media($sm) {
+    max-width: none;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  mark {
+    color: #e8fe55;
+  }
+}
+
+.mobileImg {
+  @include min-media($sm) {
+    display: none;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.text {
+  margin-bottom: 32px;
+  max-width: 320px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  color: #98989d;
+
+  @include media($sm) {
+    max-width: none;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  mark {
+    font-weight: 510;
+    color: #fff;
+  }
+}
+
+.btn {
+  @include media($sm) {
+    width: 100%;
+  }
+}

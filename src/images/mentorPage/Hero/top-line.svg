@@ -1,0 +1,98 @@
+<!--const TopLineSvg = () => (-->
+<!--<svg className={styles.topLine} width="233" height="164" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--<g opacity=".8" filter="url(#a)">-->
+<!--<path-->
+<!--        d="M21.757 142.742C64.285 76.877 134.953 36.727 211.229 21"-->
+<!--        stroke="#fff"-->
+<!--        strokeWidth="2"-->
+<!--        strokeLinecap="round"-->
+<!--/>-->
+<!--</g>-->
+<!--<defs>-->
+<!--<filter-->
+<!--        id="a"-->
+<!--        x=".756"-->
+<!--        y="0"-->
+<!--        width="231.473"-->
+<!--        height="163.742"-->
+<!--        filterUnits="userSpaceOnUse"-->
+<!--        color-interpolation-filters="sRGB"-->
+<!--&gt;-->
+<!--    <feFlood floodOpacity="0" result="BackgroundImageFix" />-->
+<!--    <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />-->
+<!--    <feOffset />-->
+<!--    <feGaussianBlur stdDeviation="10" />-->
+<!--    <feComposite in2="hardAlpha" operator="out" />-->
+<!--    <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />-->
+<!--    <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_710_11" />-->
+<!--    <feBlend in="SourceGraphic" in2="effect1_dropShadow_710_11" result="shape" />-->
+<!--</filter>-->
+<!--</defs>-->
+<!--        </svg>-->
+<!--        );-->
+<!--        const MiddleLineSvg = () => (-->
+<!--<svg className={styles.middleLine} width="547" height="259" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--<g opacity=".8" filter="url(#b)">-->
+<!--<path-->
+<!--        d="M363.229 29.16c.501-.098 1.001-.194 1.5-.289 93.845-17.868 166.679-6.64 160.22 47.375-17.781 148.681-573.22 261.32-496.72 26.82a253.19 253.19 0 0 1 11.232-28.5m0 0a247.743 247.743 0 0 1 2.153-4.5l-2.153 4.5z"-->
+<!--        stroke="#fff"-->
+<!--        strokeWidth="2"-->
+<!--        strokeLinecap="round"-->
+<!--        shapeRendering="crispEdges"-->
+<!--/>-->
+<!--</g>-->
+<!--<defs>-->
+<!--<filter-->
+<!--        id="b"-->
+<!--        x="0"-->
+<!--        y="0"-->
+<!--        width="546.347"-->
+<!--        height="258.896"-->
+<!--        filterUnits="userSpaceOnUse"-->
+<!--        color-interpolation-filters="sRGB"-->
+<!--&gt;-->
+<!--    <feFlood floodOpacity="0" result="BackgroundImageFix" />-->
+<!--    <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />-->
+<!--    <feOffset />-->
+<!--    <feGaussianBlur stdDeviation="10" />-->
+<!--    <feComposite in2="hardAlpha" operator="out" />-->
+<!--    <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />-->
+<!--    <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_710_12" />-->
+<!--    <feBlend in="SourceGraphic" in2="effect1_dropShadow_710_12" result="shape" />-->
+<!--</filter>-->
+<!--</defs>-->
+<!--        </svg>-->
+<!--        );-->
+
+<!--        const BottomLineSvg = () => (-->
+<!--<svg className={styles.bottomLine} width="608" height="237" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--<g opacity=".8" filter="url(#c)">-->
+<!--<path-->
+<!--        d="M586.5 49c-101 146.501-539.28 244.743-563.28 82.681C17.492 93.011 31.803 55.602 59 21.134"-->
+<!--        stroke="#fff"-->
+<!--        strokeWidth="2"-->
+<!--        strokeLinecap="round"-->
+<!--/>-->
+<!--</g>-->
+<!--<defs>-->
+<!--<filter-->
+<!--        id="c"-->
+<!--        x=".97"-->
+<!--        y=".134"-->
+<!--        width="606.53"-->
+<!--        height="236.279"-->
+<!--        filterUnits="userSpaceOnUse"-->
+<!--        color-interpolation-filters="sRGB"-->
+<!--&gt;-->
+<!--    <feFlood floodOpacity="0" result="BackgroundImageFix" />-->
+<!--    <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />-->
+<!--    <feOffset />-->
+<!--    <feGaussianBlur stdDeviation="10" />-->
+<!--    <feComposite in2="hardAlpha" operator="out" />-->
+<!--    <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />-->
+<!--    <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_386_2112" />-->
+<!--    <feBlend in="SourceGraphic" in2="effect1_dropShadow_386_2112" result="shape" />-->
+<!--</filter>-->
+<!--</defs>-->
+<!--        </svg>-->
+<!--        );-->

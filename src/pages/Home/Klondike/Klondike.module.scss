@@ -1,0 +1,126 @@
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
+
+.root {
+  margin-bottom: 44px;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+  }
+}
+
+.wrap {
+  padding: 32px;
+  border: 1px solid #2b2b2b;
+  border-radius: 16px;
+  background-image: url("../../../images/homePage/Klondike/left-bg.png"), url("../../../images/homePage/Klondike/right-bg.png");
+  background-position: left bottom, right bottom;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-color: #161616;
+
+  @include media($lg) {
+    padding: 24px 16px;
+    background-image: none;
+  }
+}
+
+.label {
+  margin-bottom: 24px;
+
+  @include media($sm) {
+    margin-bottom: 16px;
+  }
+}
+
+.title {
+  margin: 0 auto 32px;
+  max-width: 768px;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 120%;
+  text-align: center;
+  color: #fff;
+
+  @include media($sm) {
+    margin-bottom: 24px;
+    font-size: 26px;
+  }
+
+  mark {
+    font-weight: 860;
+    color: #e8fe55;
+  }
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 40px;
+  max-width: 768px;
+  gap: 56px;
+
+  @include media($lg) {
+    gap: 32px;
+  }
+
+  @include media($md) {
+    flex-wrap: wrap;
+    gap: 24px 8px;
+  }
+
+  @include media($sm) {
+    margin-bottom: 24px;
+  }
+}
+
+.item {
+  @include media($md) {
+    width: 48%;
+  }
+}
+
+.elements {
+
+}
+
+.element {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.text {
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  color: #fff;
+  background-image: url("../../../images/stars/black.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+
+  @include media($sm) {
+    font-size: 14px;
+  }
+
+  &Accent {
+    font-weight: 500;
+    color: #e8fe55;
+  }
+}
+
+.btn {
+  @include media($sm) {
+    width: 100%;
+  }
+}
+
+.anchor {
+  position: relative;
+  top: -150px;
+
+  @include media($sm) {
+    top: -80px;
+  }
+}

@@ -1,0 +1,54 @@
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
+
+.root {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9999999;
+  display: flex;
+  padding: 12px;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  @include media($sm) {
+    padding-top: 48px;
+  }
+}
+
+.box {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  border: 1px solid #2b2b2b;
+  border-radius: 16px;
+  background-color: #202020;
+
+  &.xl {
+    padding: 48px 72px;
+
+    @include media($sm) {
+      padding: 24px 16px;
+    }
+  }
+}
+
+.cross {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  margin: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+
+  @include media($xl) {
+    right: 4px;
+    top: 4px;
+  }
+}

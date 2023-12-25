@@ -7,6 +7,7 @@ type ParagraphProps = {
   variant?: 'grey' | 'black';
   addClass?: string;
   size?: 'xs' | 'sm';
+  children: React.ReactNode;
 };
 export const Paragraph: FC<ParagraphProps> = ({ children, variant = 'black', size = 'xs', addClass }) => {
   const appearances = {

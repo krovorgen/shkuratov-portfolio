@@ -1,0 +1,144 @@
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
+
+.root {
+  padding-bottom: 320px;
+  background-image: url("../../../images/Steps/bg-section.png");
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  mix-blend-mode: lighten;
+
+  @include media($lg) {
+    padding-bottom: 80px;
+    background-size: contain;
+  }
+}
+
+.label {
+  margin-bottom: 24px;
+}
+
+.title {
+  margin-bottom: 64px;
+  font-weight: 590;
+  font-size: 44px;
+  line-height: 130%;
+  text-align: center;
+  color: #fff;
+
+  @include media($sm) {
+    margin-bottom: 38px;
+    font-size: 26px;
+  }
+}
+
+.inner {
+  margin: 0 auto;
+  padding-bottom: 172px;
+  max-width: 1100px;
+  background-image: url("../../../images/Steps/bg.svg");
+  background-position: calc(50% - 8px) 68px;
+  background-repeat: no-repeat;
+
+  @include media($lg) {
+    padding-bottom: 24px;
+    background-image: none;
+  }
+}
+
+.item {
+  position: relative;
+  padding: 32px 24px;
+  max-width: 500px;
+  border: 1px solid #2b2b2b;
+  border-radius: 16px;
+  background-color: #202020;
+
+  @include media($lg) {
+    max-width: 100%;
+  }
+
+  @include media($sm) {
+    padding: 16px;
+  }
+
+  &:nth-child(2) {
+    @include min-media($lg) {
+      margin-left: auto;
+    }
+  }
+
+  &:nth-child(4) {
+    @include min-media($lg) {
+      margin-top: -84px;
+      margin-bottom: -44px;
+      margin-left: auto;
+    }
+  }
+
+  &:not(:last-child) {
+    @include media($lg) {
+      margin-bottom: 24px;
+    }
+
+    @include media($sm) {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.year {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 32px;
+
+  &Primary {
+    color: #d23c55;
+  }
+
+  &Accent {
+    color: #e8fe55;
+  }
+}
+
+.text {
+  p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 140%;
+    color: #98989d;
+
+    @include media($sm) {
+      font-size: 14px;
+    }
+
+    mark {
+      font-weight: 500;
+      color: #fff;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &.max400 {
+      max-width: 401px;
+
+      @include media($lg) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.btn {
+  @include media($sm) {
+    width: 100% !important;
+
+    span {
+      display: flex;
+    }
+  }
+}

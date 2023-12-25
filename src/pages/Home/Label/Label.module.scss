@@ -1,0 +1,26 @@
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
+
+.root {
+  display: flex;
+  padding: 8px 16px;
+  width: fit-content;
+  border: 1px solid #c9c9c9;
+  border-radius: 48px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  text-align: center;
+  color: #98989d;
+  gap: 8px;
+
+  @include media($sm) {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+
+.center {
+  margin-right: auto;
+  margin-left: auto;
+}

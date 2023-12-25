@@ -1,5 +1,5 @@
-@import "./src/scss/vars";
-@import "./src/scss/mixins";
+@import "/src/scss/helpers/vars";
+@import "/src/scss/helpers/mixins";
 
 .title {
   font-weight: 500;
@@ -9,6 +9,10 @@
 
   @include media($sm) {
     font-size: 24px;
+  }
+
+  mark {
+    color: #ee322c;
   }
 }
 

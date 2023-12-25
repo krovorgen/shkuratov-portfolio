@@ -14,24 +14,29 @@ import { Brifing } from './Brifing';
 import { UxResearch } from './UxResearch';
 import { InterfaceDesign } from './InterfaceDesign';
 import { UiDesign } from './UiDesign';
+import { FooterKeys } from '../../components/FooterKeys';
+import { AppRoutes } from '../../data/routes';
 
 export const Itec = () => {
   return (
     <>
-      <Header page="itec" />
-      <HeroSection page="itec" data={itec} />
-      <Stats data={itecStats} />
-      <VideoYT videoID="6yoCtv5jol4" addClass={styles.videoYT} />
-      <Brifing />
-      <UxResearch />
-      <InterfaceDesign />
-      <UiDesign />
-      <DescriptionKeys
-        addClass={styles.descriptionKeys}
-        description="Вся работа была сделана в кратчайшие сроки (7 дней). После утверждения дизайна макеты отправились к разработчикам. Проверяю вёрстку и метрики. Выдвигаю гипотезы по улучшению проекта опираясь на информацию из метрик. "
-        link="itec.by"
-      />
-      <Navigation nextLink="/bomba" />
+      <main className="main">
+        <Header />
+        <HeroSection page="itec" data={itec} />
+        <Stats data={itecStats} />
+        <VideoYT videoID="6yoCtv5jol4" addClass={styles.videoYT} />
+        <Brifing />
+        <UxResearch />
+        <InterfaceDesign />
+        <UiDesign />
+        <DescriptionKeys
+          addClass={styles.descriptionKeys}
+          description="Вся работа была сделана в кратчайшие сроки (7 дней). После утверждения дизайна макеты отправились к разработчикам. Проверяю вёрстку и метрики. Выдвигаю гипотезы по улучшению проекта опираясь на информацию из метрик. "
+          link="itec.by"
+        />
+        <Navigation nextLink={AppRoutes.ivr} />
+      </main>
+      <FooterKeys />
     </>
   );
 };
